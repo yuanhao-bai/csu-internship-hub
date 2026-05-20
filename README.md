@@ -6,17 +6,30 @@ The project addresses a common problem in engineering education: internship info
 
 ## Current Release
 
-The current version has been upgraded from a simple prototype into a more publishable single-page web application. It now includes a mature landing dashboard, discipline-specific guidance, a peer community, automatic post classification, and an internship resource radar that helps collect and organize public internship links for the three majors.
+The current version is a release-oriented single-page web application. It includes a dashboard, discipline-specific guidance, a peer community, automatic post classification, an internship resource radar, and a social media experience library for collecting useful internship-related links from Xiaohongshu, Douyin, and Bilibili.
 
 ## Core Features
 
-- **Release-ready dashboard**: Provides a clearer entry point with platform positioning, community statistics, latest posts, and posting quality standards.
+- **Release-ready dashboard**: Provides platform positioning, community statistics, latest posts, social media entry counts, and posting quality standards.
 - **Three-major structure**: Organizes content around Safety Engineering, Mining Engineering, and Urban Underground Space Engineering.
 - **Guidance hub**: Summarizes preparation pathways, resume readiness, interview strategy, and major-specific skills.
 - **Peer community**: Supports posting, searching, liking, commenting, image upload, and PDF preview.
 - **Automatic post classification**: Existing and newly published posts are automatically grouped by major and content type based on keywords.
-- **Internship resource radar**: Attempts to fetch public internship-related postings from external recruitment pages and organizes them by the three majors. If a website restricts cross-site crawling, the platform keeps a verified search entry so users can open the original source directly.
+- **Internship resource radar**: Attempts to fetch public internship-related postings from recruitment pages and organizes them by the three majors. If a website restricts cross-site crawling, the platform keeps a verified search entry so users can open the original source directly.
+- **Social media experience library**: Provides searchable Xiaohongshu, Douyin, and Bilibili search entries for each major, and supports manually collecting public social media links with title, platform, major, and notes.
 - **Publication safeguards**: Adds clearer quality requirements for public posts and reminds users to avoid uploading sensitive personal information.
+
+## Social Media Collection Strategy
+
+Directly scraping full posts, images, comments, or user information from Xiaohongshu, Douyin, and Bilibili is unstable and may conflict with platform rules. Therefore, this project uses a publication-safe approach:
+
+- provide major-specific search entry points for Xiaohongshu, Douyin, and Bilibili;
+- allow users to manually collect public links that are useful for internship preparation;
+- store only the title, platform, original URL, major tag, and short note;
+- avoid copying full post content, comments, images, or private user information;
+- keep all external content verifiable through the original platform link.
+
+This makes the feature more reliable for static hosting and more appropriate for public release.
 
 ## Research Relevance
 
@@ -28,6 +41,7 @@ Potential research themes include:
 - peer knowledge sharing and experience transfer in higher education;
 - discipline-specific information organization for internship preparation;
 - lightweight web platforms for student-facing educational support;
+- social media link curation for informal learning and career preparation;
 - data-informed analysis of students' internship concerns and preparation behavior.
 
 A possible research question derived from this project is:
@@ -43,8 +57,9 @@ A possible research question derived from this project is:
 | Backend-as-a-Service | Supabase |
 | Application Structure | Single-file `index.html` web app |
 | Community Data | Supabase `posts` table |
-| Resource Collection | Client-side public page fetching with fallback source links |
-| Core Interactions | Search, posting, commenting, likes, image/PDF preview, major classification, resource radar |
+| Job Resource Collection | Client-side public page fetching with fallback source links |
+| Social Media Collection | Search-entry generation and browser-local manual link collection |
+| Core Interactions | Search, posting, commenting, likes, image/PDF preview, major classification, resource radar, social link library |
 
 The project intentionally remains lightweight so that it can be deployed through static hosting services such as GitHub Pages, Netlify, or Vercel. This makes it suitable for fast iteration, user testing, and portfolio demonstration.
 
@@ -55,7 +70,7 @@ The project is currently a single-file frontend application. It can be previewed
 ```text
 1. Clone or download this repository.
 2. Open index.html in a browser.
-3. Explore the dashboard, guidance hub, community, and resource radar.
+3. Explore the dashboard, guidance hub, community, resource radar, and social media experience library.
 ```
 
 For online deployment, GitHub Pages is the simplest option for this repository structure.
@@ -66,15 +81,16 @@ To further develop this project into a research-oriented study, the following ev
 
 - **Student interviews**: Understand how students currently obtain internship information and what barriers they face.
 - **Questionnaire study**: Measure students' perceived preparedness, information sufficiency, and confidence before and after using the platform.
-- **Usability testing**: Observe how efficiently students complete tasks such as finding a career pathway, preparing for an interview, or publishing an experience post.
-- **Behavioral data analysis**: Analyze search keywords, post categories, comment interactions, and resource access patterns.
+- **Usability testing**: Observe how efficiently students complete tasks such as finding a career pathway, preparing for an interview, collecting a social media experience link, or publishing an experience post.
+- **Behavioral data analysis**: Analyze search keywords, post categories, collected social links, comment interactions, and resource access patterns.
 - **Comparative study**: Compare the platform-supported preparation process with traditional fragmented information-seeking methods.
 
 ## Future Work
 
 - Add secure user authentication and role-based access control.
 - Move sensitive moderation logic to backend services or Supabase Row Level Security policies.
-- Add a formal moderation queue for public posts.
+- Store social media link collections in a shared Supabase table instead of browser-local storage.
+- Add a formal moderation queue for public posts and collected links.
 - Improve the external resource crawler with a server-side scheduled job.
 - Add a data dashboard for internship trends across the three majors.
 - Improve mobile accessibility and visual consistency.
@@ -83,4 +99,4 @@ To further develop this project into a research-oriented study, the following ev
 
 ## Project Status
 
-This repository is currently a release-oriented student support platform prototype. It is suitable for public demonstration and early user feedback, while still leaving room for stronger backend security, automated data pipelines, and formal research evaluation.
+This repository is currently a release-oriented student support platform prototype. It is suitable for public demonstration and early user feedback, while still leaving room for stronger backend security, automated data pipelines, shared social-link storage, and formal research evaluation.
