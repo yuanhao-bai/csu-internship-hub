@@ -1,86 +1,105 @@
 # CSU Internship Hub
 
-面向中南大学资源与安全工程学院学生的实习指导与同伴资源互助平台。项目聚焦安全工程、采矿工程、城市地下空间工程等专业学生在实习准备过程中的信息差、经验断层和资源分散问题，尝试用轻量级 Web 平台整合专业路径、求职经验、面试准备和同伴互助内容。
+CSU Internship Hub is a lightweight web-based internship guidance and peer-support platform designed for students in the School of Resources and Safety Engineering at Central South University. The project focuses on students majoring in Safety Engineering, Mining Engineering, and Urban Underground Space Engineering, where internship preparation is often affected by fragmented information, limited peer experience sharing, and unequal access to practical career guidance.
 
-> A lightweight internship guidance and peer-support platform for students in the School of Resources and Safety Engineering, Central South University.
+Rather than serving only as a static information page, this repository presents an early-stage digital support system prototype for engineering education. It explores how a discipline-specific online platform can help undergraduate students understand career pathways, prepare for internship applications, and transform individual internship experience into reusable peer knowledge.
 
-## 项目定位
+## Project Motivation
 
-CSU Internship Hub 不只是一个信息展示网页，而是一个面向工程教育场景的数字化支持系统原型。它希望回答一个具体问题：如何通过专业化、同伴化、可持续更新的在线平台，帮助低年级学生更早理解行业方向、准备实习申请，并降低求职过程中的信息不对称。
+Students in engineering disciplines often rely on scattered sources when preparing for internships: informal conversations, senior students' personal notes, WeChat groups, recruitment posts, and fragmented online materials. This creates several challenges:
 
-该项目可作为科研申请中的实践基础，关联以下方向：
+- internship information is difficult to organize and compare;
+- lower-year students may lack access to reliable peer experience;
+- students often prepare resumes and interviews without discipline-specific guidance;
+- valuable internship experience is easily lost after each cohort graduates;
+- generic career platforms rarely reflect the needs of specialized engineering majors.
 
-- 工程教育中的职业发展支持
-- 学生实习准备与就业能力培养
-- 同伴经验共享平台设计
-- 教育技术与人机交互原型验证
-- 专业知识资源的结构化组织与传播
+CSU Internship Hub was built to address these issues through a focused, low-barrier platform that combines structured guidance with community-based knowledge sharing.
 
-## 核心功能
+## Research Relevance
 
-- **百科指南**：整理专业方向、实习避坑、简历面试、就业路径、女生专项建议和 90 天冲刺计划。
-- **社区广场**：支持学生发布经验帖、资源帖和求助帖，形成可持续积累的同伴知识库。
-- **内容搜索**：支持对指南内容和社区帖子进行关键词检索。
-- **多媒体附件**：支持图片和 PDF 附件，用于分享简历样例、面经材料或学习资源。
-- **互动反馈**：支持点赞、评论和帖子讨论，增强学生之间的互助交流。
-- **基础管理能力**：提供管理员删除帖子能力，便于维护社区内容质量。
+This project can be positioned as a practice-based research prototype for PhD applications in areas such as engineering education, educational technology, human-computer interaction, digital learning environments, and career readiness support.
 
-## 技术实现
+Potential research themes include:
 
-当前版本采用低部署成本的单页应用结构，便于快速验证产品想法与用户需求。
+- digital support systems for engineering students' career development;
+- peer knowledge sharing and experience transfer in higher education;
+- human-computer interaction design for student-facing educational platforms;
+- discipline-specific information organization for internship preparation;
+- data-informed analysis of students' career concerns and preparation behaviors.
 
-| 模块 | 技术 |
+A possible research question derived from this project is:
+
+> How can a discipline-specific digital platform reduce information asymmetry and improve internship preparedness among undergraduate engineering students?
+
+## Key Features
+
+- **Structured Guidance Hub**: Provides curated guidance on major-specific career pathways, internship preparation, resume and interview strategies, common pitfalls, and a 90-day preparation plan.
+- **Peer Community Space**: Allows students to publish experience posts, resource-sharing posts, and questions, helping individual experience become a reusable community knowledge base.
+- **Searchable Content**: Supports keyword search across both the guidance section and community posts.
+- **Multimedia Resource Sharing**: Supports image and PDF attachments, enabling students to share resume samples, interview notes, checklists, or other practical materials.
+- **Interaction Mechanisms**: Includes likes and comments to encourage discussion, feedback, and peer support.
+- **Basic Moderation Support**: Provides a simple administrator deletion function for maintaining content quality during the prototype stage.
+
+## Technical Implementation
+
+The current version is implemented as a lightweight single-page web application, prioritizing fast prototyping and low deployment cost.
+
+| Component | Implementation |
 | --- | --- |
-| 前端框架 | React 18 CDN |
-| 样式系统 | Tailwind CSS CDN + 自定义 CSS |
-| 数据服务 | Supabase |
-| 页面结构 | 单文件 `index.html` |
-| 交互能力 | 搜索、发帖、评论、点赞、附件预览 |
+| Frontend | React 18 via CDN |
+| Styling | Tailwind CSS via CDN and custom CSS |
+| Backend-as-a-Service | Supabase |
+| Application Structure | Single-file `index.html` prototype |
+| Core Interactions | Search, posting, commenting, likes, image/PDF preview |
 
-## 研究与申请价值
+This architecture makes the project easy to demonstrate, iterate, and deploy as an early-stage research prototype. It also leaves room for future migration to a more structured frontend framework and a more secure backend architecture.
 
-在科研申请材料中，本项目可以作为“已有实践基础”或“研究原型”呈现，重点不在于代码复杂度，而在于它针对真实学生群体提出了明确问题，并提供了可验证的解决方案雏形。
+## Why This Matters for a PhD Application
 
-可以强调的价值包括：
+For research applications, the value of this project lies not only in its technical implementation but also in the way it connects a real student problem with a concrete, testable digital intervention.
 
-1. **真实场景驱动**：项目面向资源与安全工程学院学生实习准备中的具体痛点，而非泛化的求职平台。
-2. **专业化内容组织**：围绕安全工程、采矿工程、城市地下空间工程等专业建立结构化指南。
-3. **同伴知识沉淀**：通过社区发帖和评论机制，将个体经验转化为可复用的集体资源。
-4. **可扩展研究原型**：后续可引入用户访谈、问卷调查、可用性测试和平台行为数据分析。
-5. **低门槛部署验证**：单页应用结构便于快速迭代，也适合作为教育技术或 HCI 方向的早期原型。
+The project demonstrates:
 
-## 使用方式
+1. **Problem awareness**: It identifies a specific information gap in engineering students' internship preparation.
+2. **User-centered thinking**: It is designed around the needs of students in specialized engineering majors rather than a general job-search audience.
+3. **Prototype-driven research ability**: It translates an observed educational problem into an interactive system prototype.
+4. **Potential for empirical evaluation**: It can be extended into user interviews, surveys, usability testing, and behavioral data analysis.
+5. **Scalability of research context**: The model could be adapted from one school or major group to other engineering disciplines or institutions.
 
-由于当前项目为单文件前端应用，可以直接打开 `index.html` 进行预览。
+## Usage
+
+The project is currently a single-file frontend prototype. It can be previewed by opening `index.html` directly in a browser.
 
 ```text
-1. 克隆或下载仓库
-2. 打开 index.html
-3. 浏览百科指南或进入社区广场发布内容
+1. Clone or download this repository.
+2. Open index.html in a browser.
+3. Explore the guidance hub or use the community space to publish and discuss posts.
 ```
 
-如果需要部署到线上，可使用 GitHub Pages、Netlify、Vercel 或其他静态网站托管服务。
-
-## 后续改进计划
-
-- 增加用户登录与角色权限管理
-- 将管理员认证和敏感逻辑迁移到更安全的后端或 Supabase RLS 规则中
-- 建立更规范的帖子分类、标签和审核机制
-- 增加数据统计面板，用于分析学生关注的行业方向和实习问题
-- 引入可用性测试，评估平台对实习准备效率和信心提升的影响
-- 支持多学院、多专业扩展，验证平台模型的迁移能力
-- 增加移动端体验优化和无障碍访问支持
+For online deployment, the project can be hosted on GitHub Pages, Netlify, Vercel, or other static hosting services.
 
 ## Potential Evaluation Plan
 
-为了支撑科研申请或后续论文工作，可以考虑以下验证路径：
+To further develop this project into a research-oriented study, the following evaluation methods can be considered:
 
-- **访谈研究**：访谈不同年级学生，了解实习信息获取方式与主要困难。
-- **问卷调查**：量化平台使用前后学生对实习准备的信心、信息充分度和行动清晰度。
-- **可用性测试**：观察学生完成“查找岗位方向”“准备面试”“发布经验帖”等任务的效率。
-- **行为数据分析**：分析热门搜索词、帖子类型、评论互动和资源访问趋势。
-- **对比实验**：比较使用平台与传统分散信息获取方式在准备效率上的差异。
+- **Student Interviews**: Interview students from different years to understand how they currently obtain internship information and what barriers they face.
+- **Questionnaire Study**: Measure students' perceived preparedness, information sufficiency, and confidence before and after using the platform.
+- **Usability Testing**: Observe how efficiently students complete tasks such as finding a career pathway, preparing for an interview, or publishing an experience post.
+- **Behavioral Data Analysis**: Analyze search keywords, post categories, comment interactions, and resource access patterns to understand students' practical concerns.
+- **Comparative Study**: Compare the platform-supported preparation process with traditional fragmented information-seeking methods.
 
-## 项目状态
+## Future Work
 
-当前仓库处于原型阶段，主要目标是验证平台概念和功能流程。后续将继续完善数据安全、内容治理、用户研究和部署体验，使其从课程/作品原型逐步发展为可用于科研展示和真实学生服务的实践平台。
+- Add user authentication and role-based access control.
+- Move administrator authentication and sensitive logic to a more secure backend design.
+- Configure Supabase Row Level Security policies for safer data operations.
+- Introduce structured post categories, tags, and moderation workflows.
+- Add an analytics dashboard for identifying common internship concerns and career interests.
+- Improve mobile responsiveness and accessibility.
+- Conduct formal usability testing with students from relevant majors.
+- Extend the platform model to other schools, departments, or engineering disciplines.
+
+## Project Status
+
+This repository is currently an early-stage prototype. Its primary goal is to validate the concept, demonstrate the interaction flow, and provide a foundation for future research-oriented development. With further improvements in data security, content governance, user evaluation, and deployment, the project could evolve from a portfolio prototype into a practical student-support platform and a case study for research in engineering education and educational technology.
