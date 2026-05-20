@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="中南大学资源与安全工程学院实习互助平台，面向安全工程、采矿工程、城市地下空间工程学生提供实习指南、经验共享与岗位资源整理。">
+    <meta name="description" content="中南大学资源与安全工程学院实习互助平台，面向安全工程、采矿工程、城市地下空间工程学生提供实习指南、经验共享、岗位资源与社媒经验整理。">
     <title>CSU资安院实习互助平台</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -12,18 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        :root { --ink: #172033; --muted: #667085; --line: #d9e2ec; --brand: #1f6feb; --soft: #f5f8fc; }
+        :root { --ink: #172033; --line: #d9e2ec; --brand: #1f6feb; }
         * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: var(--ink);
-            background: linear-gradient(180deg, #f7fbff 0%, #eef4f9 44%, #f8fafc 100%);
-        }
+        body { margin: 0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: linear-gradient(180deg, #f7fbff 0%, #eef4f9 48%, #f8fafc 100%); }
         button, input, select, textarea { font: inherit; }
         .shell { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
-        .nav-glass { background: rgba(255,255,255,.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
-        .surface { background: rgba(255,255,255,.94); border: 1px solid var(--line); box-shadow: 0 18px 45px -34px rgba(15,23,42,.45); }
+        .nav-glass { background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
+        .surface { background: rgba(255,255,255,.95); border: 1px solid var(--line); box-shadow: 0 18px 45px -34px rgba(15,23,42,.45); }
         .hero { background: linear-gradient(135deg, #0f2f57 0%, #1464a5 48%, #1f7a70 100%); }
         .tab-active { color: #0f5fb5; border-bottom: 3px solid #0f5fb5; }
         .chip { border: 1px solid #dbe7f3; background: #f7fbff; color: #34516f; }
@@ -46,39 +41,21 @@
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         const MAJORS = [
-            {
-                id: 'safety',
-                label: '安全工程',
-                short: '安全',
-                tone: 'bg-blue-50 text-blue-700 border-blue-100',
-                keywords: ['安全', 'EHS', 'HSE', '应急', '风险', '隐患', '消防', '职业健康', '双重预防', '安全评价', '安全工程'],
-                tracks: ['制造业EHS', '新能源安全', '安全咨询', '施工安全', '应急管理'],
-                skills: ['法规检索', '风险辨识', '事故案例复盘', '现场沟通', 'Excel/PowerBI']
-            },
-            {
-                id: 'mining',
-                label: '采矿工程',
-                short: '采矿',
-                tone: 'bg-amber-50 text-amber-800 border-amber-100',
-                keywords: ['采矿', '矿山', '矿业', '通风', '爆破', '地压', '露天矿', '地下矿', '智能矿山', '矿井'],
-                tracks: ['智能矿山', '矿山安全', '通风与爆破', '生产调度', '矿山数字化'],
-                skills: ['CAD制图', 'Dimine/三维建模', '通风网络', '采矿方法', '现场记录']
-            },
-            {
-                id: 'underground',
-                label: '城市地下空间工程',
-                short: '城地',
-                tone: 'bg-emerald-50 text-emerald-800 border-emerald-100',
-                keywords: ['地下空间', '隧道', '地铁', '盾构', '基坑', '岩土', 'BIM', '监测', '管廊', '地下工程'],
-                tracks: ['盾构施工', '地铁工程', '基坑监测', 'BIM协同', '地下管廊'],
-                skills: ['施工工法', '监测数据', 'BIM协同', '测量与制图', '项目文档']
-            }
+            { id: 'safety', label: '安全工程', short: '安全', tone: 'bg-blue-50 text-blue-700 border-blue-100', keywords: ['安全', 'EHS', 'HSE', '应急', '风险', '隐患', '消防', '职业健康', '双重预防', '安全评价', '安全工程'], tracks: ['制造业EHS', '新能源安全', '安全咨询', '施工安全', '应急管理'], skills: ['法规检索', '风险辨识', '事故案例复盘', '现场沟通', 'Excel/PowerBI'] },
+            { id: 'mining', label: '采矿工程', short: '采矿', tone: 'bg-amber-50 text-amber-800 border-amber-100', keywords: ['采矿', '矿山', '矿业', '通风', '爆破', '地压', '露天矿', '地下矿', '智能矿山', '矿井'], tracks: ['智能矿山', '矿山安全', '通风与爆破', '生产调度', '矿山数字化'], skills: ['CAD制图', 'Dimine/三维建模', '通风网络', '采矿方法', '现场记录'] },
+            { id: 'underground', label: '城市地下空间工程', short: '城地', tone: 'bg-emerald-50 text-emerald-800 border-emerald-100', keywords: ['地下空间', '隧道', '地铁', '盾构', '基坑', '岩土', 'BIM', '监测', '管廊', '地下工程'], tracks: ['盾构施工', '地铁工程', '基坑监测', 'BIM协同', '地下管廊'], skills: ['施工工法', '监测数据', 'BIM协同', '测量与制图', '项目文档'] }
+        ];
+
+        const PLATFORMS = [
+            { id: 'xiaohongshu', label: '小红书', color: 'bg-rose-50 text-rose-700 border-rose-100', buildSearch: q => 'https://www.xiaohongshu.com/search_result?keyword=' + encodeURIComponent(q) },
+            { id: 'douyin', label: '抖音', color: 'bg-slate-900 text-white border-slate-900', buildSearch: q => 'https://www.douyin.com/search/' + encodeURIComponent(q) + '?type=general' },
+            { id: 'bilibili', label: '哔哩哔哩', color: 'bg-sky-50 text-sky-700 border-sky-100', buildSearch: q => 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(q) }
         ];
 
         const GUIDES = [
-            { title: '实习准备路线', body: '先确定专业方向，再准备岗位关键词、项目故事和面试素材。建议把每一次课程设计、实验、竞赛和现场参观都整理成可复述的STAR案例。' },
+            { title: '实习准备路线', body: '先确定专业方向，再准备岗位关键词、项目故事和面试素材。把课程设计、实验、竞赛和现场参观都整理成可复述的STAR案例。' },
             { title: '简历成熟度检查', body: '每段经历都要包含场景、任务、动作和结果。避免只写课程名，优先写工具、方法、产出和你解决的问题。' },
-            { title: '面试表达框架', body: '准备3个专业案例、2个协作案例、1个失败复盘案例。面试中把“我学过”改成“我用它解决过什么”。' },
+            { title: '面试表达框架', body: '准备3个专业案例、2个协作案例、1个失败复盘案例。把“我学过”改成“我用它解决过什么”。' },
             { title: '投递节奏建议', body: '建立岗位看板，记录公司、岗位、城市、要求、投递状态和复盘结论。每周固定复盘简历命中率和面试反馈。' }
         ];
 
@@ -100,18 +77,27 @@
             { major: 'underground', title: '基坑监测 / 岩土工程助理：适合建立数据与工程判断能力', source: '精选方向', url: 'https://sou.zhaopin.com/?kw=%E5%9F%BA%E5%9D%91%E7%9B%91%E6%B5%8B%E5%AE%9E%E4%B9%A0', summary: '建议准备监测曲线理解、施工日志和风险预警表达。' }
         ];
 
-        const escapeReg = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const SOCIAL_SEEDS = [
+            { major: 'safety', platform: 'xiaohongshu', title: '小红书搜索：安全工程 实习 面经 EHS', query: '安全工程 实习 面经 EHS', note: '适合找学长学姐的投递复盘、简历修改和企业体验。' },
+            { major: 'safety', platform: 'douyin', title: '抖音搜索：EHS实习 安全工程 求职', query: 'EHS实习 安全工程 求职', note: '适合看短视频经验，但需要回到原链接核验岗位信息。' },
+            { major: 'safety', platform: 'bilibili', title: 'B站搜索：安全工程就业 实习 面试', query: '安全工程就业 实习 面试', note: '适合找长视频经验、行业介绍和职业路径分享。' },
+            { major: 'mining', platform: 'xiaohongshu', title: '小红书搜索：采矿工程 实习 矿山', query: '采矿工程 实习 矿山', note: '重点关注矿山现场、智能矿山、央国企实习经验。' },
+            { major: 'mining', platform: 'douyin', title: '抖音搜索：采矿工程就业 矿山实习', query: '采矿工程就业 矿山实习', note: '适合快速了解岗位现场与行业真实体验。' },
+            { major: 'mining', platform: 'bilibili', title: 'B站搜索：采矿工程 智能矿山 实习', query: '采矿工程 智能矿山 实习', note: '适合系统了解矿山数字化、建模与职业路径。' },
+            { major: 'underground', platform: 'xiaohongshu', title: '小红书搜索：城市地下空间工程 实习 盾构', query: '城市地下空间工程 实习 盾构', note: '适合搜地铁、盾构、基坑监测相关实习经验。' },
+            { major: 'underground', platform: 'douyin', title: '抖音搜索：盾构实习 地铁工程 实习', query: '盾构实习 地铁工程 实习', note: '适合看施工现场、岗位日常和项目环境。' },
+            { major: 'underground', platform: 'bilibili', title: 'B站搜索：地下空间工程 隧道 实习', query: '地下空间工程 隧道 实习', note: '适合找长视频学习、专业介绍和经验复盘。' }
+        ];
+
+        const getPlatform = (id) => PLATFORMS.find(platform => platform.id === id) || PLATFORMS[0];
         const majorById = (id) => MAJORS.find(item => item.id === id) || MAJORS[0];
         const normalize = (value) => (value || '').toString();
 
-        const classifyMajor = (post) => {
-            const text = [post.major, post.title, post.content, post.author].map(normalize).join(' ').toLowerCase();
+        const classifyMajor = (item) => {
+            const text = [item.major, item.title, item.content, item.note, item.url, item.author].map(normalize).join(' ').toLowerCase();
             const direct = MAJORS.find(major => text.includes(major.id) || text.includes(major.label.toLowerCase()));
             if (direct) return direct.id;
-            const scored = MAJORS.map(major => ({
-                id: major.id,
-                score: major.keywords.reduce((sum, word) => sum + (text.includes(word.toLowerCase()) ? 1 : 0), 0)
-            })).sort((a, b) => b.score - a.score);
+            const scored = MAJORS.map(major => ({ id: major.id, score: major.keywords.reduce((sum, word) => sum + (text.includes(word.toLowerCase()) ? 1 : 0), 0) })).sort((a, b) => b.score - a.score);
             return scored[0].score > 0 ? scored[0].id : 'safety';
         };
 
@@ -124,13 +110,18 @@
             return '综合讨论';
         };
 
+        const inferPlatform = (url) => {
+            const lower = (url || '').toLowerCase();
+            if (lower.includes('xiaohongshu.com') || lower.includes('xhslink.com')) return 'xiaohongshu';
+            if (lower.includes('douyin.com') || lower.includes('iesdouyin.com')) return 'douyin';
+            if (lower.includes('bilibili.com') || lower.includes('b23.tv')) return 'bilibili';
+            return 'xiaohongshu';
+        };
+
         const renderContentWithLinks = (text) => {
             if (!text) return null;
             const urlRegex = /(https?:\/\/[^\s]+)/g;
-            return text.split(urlRegex).map((part, i) => {
-                if (part.match(urlRegex)) return <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline font-semibold break-all">{part}</a>;
-                return part;
-            });
+            return text.split(urlRegex).map((part, i) => part.match(urlRegex) ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline font-semibold break-all">{part}</a> : part);
         };
 
         function App() {
@@ -149,32 +140,46 @@
             const [radarItems, setRadarItems] = useState(FALLBACK_ITEMS);
             const [radarStatus, setRadarStatus] = useState('standby');
             const [lastScan, setLastScan] = useState('未抓取');
+            const [socialLinks, setSocialLinks] = useState(() => {
+                try { return JSON.parse(localStorage.getItem('csu-social-links') || '[]'); } catch { return []; }
+            });
+            const [socialQuery, setSocialQuery] = useState('');
+            const [socialMajor, setSocialMajor] = useState('all');
+            const [socialPlatform, setSocialPlatform] = useState('all');
 
             useEffect(() => { fetchPosts(); }, []);
+            useEffect(() => { localStorage.setItem('csu-social-links', JSON.stringify(socialLinks)); }, [socialLinks]);
 
-            const enrichedPosts = useMemo(() => posts.map(post => ({
-                ...post,
-                _major: classifyMajor(post),
-                _type: inferPostType(post)
-            })), [posts]);
-
+            const enrichedPosts = useMemo(() => posts.map(post => ({ ...post, _major: classifyMajor(post), _type: inferPostType(post) })), [posts]);
             const postTypes = useMemo(() => ['all', ...Array.from(new Set(enrichedPosts.map(post => post._type)))], [enrichedPosts]);
+            const socialItems = useMemo(() => [
+                ...socialLinks.map(item => ({ ...item, sourceType: 'manual' })),
+                ...SOCIAL_SEEDS.map(seed => ({
+                    ...seed,
+                    sourceType: 'search',
+                    url: getPlatform(seed.platform).buildSearch(seed.query),
+                    createdAt: '系统入口'
+                }))
+            ], [socialLinks]);
 
             const filteredPosts = enrichedPosts.filter(post => {
                 const blob = [post.title, post.content, post.author, post._type, majorById(post._major).label].join(' ').toLowerCase();
-                const queryMatch = !postQuery || blob.includes(postQuery.toLowerCase());
-                const majorMatch = activeMajor === 'all' || post._major === activeMajor;
-                const typeMatch = activeType === 'all' || post._type === activeType;
-                return queryMatch && majorMatch && typeMatch;
+                return (!postQuery || blob.includes(postQuery.toLowerCase())) && (activeMajor === 'all' || post._major === activeMajor) && (activeType === 'all' || post._type === activeType);
+            });
+
+            const filteredSocial = socialItems.filter(item => {
+                const major = item.major || classifyMajor(item);
+                const blob = [item.title, item.note, item.query, item.url, majorById(major).label, getPlatform(item.platform).label].join(' ').toLowerCase();
+                return (!socialQuery || blob.includes(socialQuery.toLowerCase())) && (socialMajor === 'all' || major === socialMajor) && (socialPlatform === 'all' || item.platform === socialPlatform);
             });
 
             const dashboard = useMemo(() => {
                 const totalComments = enrichedPosts.reduce((sum, post) => sum + ((post.comments && post.comments.length) || 0), 0);
                 const totalLikes = enrichedPosts.reduce((sum, post) => sum + (post.likes || 0), 0);
-                const majors = MAJORS.map(major => ({ ...major, count: enrichedPosts.filter(post => post._major === major.id).length }));
+                const majors = MAJORS.map(major => ({ ...major, count: enrichedPosts.filter(post => post._major === major.id).length, socialCount: socialItems.filter(item => (item.major || classifyMajor(item)) === major.id).length }));
                 const latest = [...enrichedPosts].sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0)).slice(0, 4);
-                return { total: enrichedPosts.length, totalComments, totalLikes, majors, latest };
-            }, [enrichedPosts]);
+                return { total: enrichedPosts.length, totalComments, totalLikes, majors, latest, socialTotal: socialItems.length };
+            }, [enrichedPosts, socialItems]);
 
             async function fetchPosts() {
                 setLoadingPosts(true);
@@ -221,16 +226,7 @@
                 const title = formData.get('title').trim();
                 const content = formData.get('content').trim();
                 if (title.length < 6 || content.length < 20) return alert('为了方便后续同学检索，标题至少6字，正文至少20字。');
-                const payload = {
-                    title,
-                    major: formData.get('major'),
-                    author: formData.get('author') || '匿名同学',
-                    content,
-                    image: uploadedImg,
-                    pdf: uploadedPdf,
-                    likes: 0,
-                    comments: []
-                };
+                const payload = { title, major: formData.get('major'), author: formData.get('author') || '匿名同学', content, image: uploadedImg, pdf: uploadedPdf, likes: 0, comments: [] };
                 const { error } = await supabase.from('posts').insert([payload]);
                 if (error) return alert('发布失败，请稍后再试，或检查附件大小。');
                 setIsModalOpen(false);
@@ -296,13 +292,42 @@
                 setLastScan(new Date().toLocaleString());
             }
 
+            function addSocialLink(e) {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const url = formData.get('url').trim();
+                const title = formData.get('title').trim();
+                if (!url || !/^https?:\/\//i.test(url)) return alert('请粘贴完整的公开链接。');
+                if (!title || title.length < 4) return alert('请给这个链接写一个方便检索的标题。');
+                const item = {
+                    id: Date.now().toString(),
+                    platform: formData.get('platform') || inferPlatform(url),
+                    major: formData.get('major') || classifyMajor({ title, url, note: formData.get('note') }),
+                    title,
+                    url,
+                    note: formData.get('note') || '手动收录的公开社媒经验链接，请打开原平台查看完整内容。',
+                    createdAt: new Date().toLocaleString()
+                };
+                setSocialLinks([item, ...socialLinks]);
+                e.target.reset();
+            }
+
+            function removeSocialLink(id) {
+                setSocialLinks(socialLinks.filter(item => item.id !== id));
+            }
+
             function NavButton({ id, label }) {
-                return <button onClick={() => setView(id)} className={`h-16 px-2 sm:px-3 text-sm font-bold border-b-2 border-transparent transition ${view === id ? 'tab-active' : 'text-slate-500 hover:text-slate-900'}`}>{label}</button>;
+                return <button onClick={() => setView(id)} className={`h-16 px-2 sm:px-3 text-sm font-bold border-b-2 border-transparent transition whitespace-nowrap ${view === id ? 'tab-active' : 'text-slate-500 hover:text-slate-900'}`}>{label}</button>;
             }
 
             function MajorBadge({ id }) {
                 const major = majorById(id);
                 return <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-bold ${major.tone}`}>{major.label}</span>;
+            }
+
+            function PlatformBadge({ id }) {
+                const platform = getPlatform(id);
+                return <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-bold ${platform.color}`}>{platform.label}</span>;
             }
 
             function DashboardView() {
@@ -312,15 +337,16 @@
                             <div>
                                 <p className="text-sm font-bold text-blue-100 mb-3">CSU Internship Hub</p>
                                 <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">资安院实习互助全景平台</h1>
-                                <p className="mt-4 text-blue-50 leading-relaxed max-w-2xl">面向安全工程、采矿工程、城市地下空间工程三个专业，整合实习指南、同伴经验、岗位线索和准备路径，让信息从“零散聊天”沉淀为可复用的学生知识库。</p>
+                                <p className="mt-4 text-blue-50 leading-relaxed max-w-2xl">面向安全工程、采矿工程、城市地下空间工程，整合实习指南、同伴经验、岗位线索和小红书/抖音/B站社媒经验入口。</p>
                                 <div className="mt-6 flex flex-wrap gap-3">
                                     <button onClick={() => setView('community')} className="rounded-xl bg-white text-slate-900 px-5 py-3 font-bold hover:bg-blue-50 focus-ring">进入社区</button>
+                                    <button onClick={() => setView('social')} className="rounded-xl bg-white/12 border border-white/25 px-5 py-3 font-bold hover:bg-white/20 focus-ring">社媒经验库</button>
                                     <button onClick={() => { setView('radar'); scanInternshipSources(); }} className="rounded-xl bg-white/12 border border-white/25 px-5 py-3 font-bold hover:bg-white/20 focus-ring">抓取岗位资源</button>
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                                 <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">{dashboard.total}</p><p className="text-sm text-blue-100">社区帖子</p></div>
-                                <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">{dashboard.totalLikes}</p><p className="text-sm text-blue-100">累计赞同</p></div>
+                                <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">{dashboard.socialTotal}</p><p className="text-sm text-blue-100">社媒入口</p></div>
                                 <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">{dashboard.totalComments}</p><p className="text-sm text-blue-100">评论互动</p></div>
                                 <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">3</p><p className="text-sm text-blue-100">专业方向</p></div>
                             </div>
@@ -329,7 +355,7 @@
 
                     <section className="grid md:grid-cols-3 gap-4">
                         {dashboard.majors.map(major => <div key={major.id} className="surface rounded-2xl p-5">
-                            <div className="flex justify-between items-center mb-4"><MajorBadge id={major.id} /><span className="text-sm text-slate-500">{major.count} 条经验</span></div>
+                            <div className="flex justify-between items-center mb-4"><MajorBadge id={major.id} /><span className="text-sm text-slate-500">{major.count}帖 / {major.socialCount}社媒</span></div>
                             <h3 className="font-extrabold text-lg mb-3">{major.label}实习路径</h3>
                             <div className="flex flex-wrap gap-2 mb-4">{major.tracks.map(track => <span key={track} className="chip rounded-full px-2.5 py-1 text-xs font-semibold">{track}</span>)}</div>
                             <p className="text-sm text-slate-500 leading-relaxed">建议能力：{major.skills.join(' / ')}</p>
@@ -352,7 +378,7 @@
                             <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                                 <p><strong>1. 标题清楚：</strong>包含岗位、公司类型或专业关键词。</p>
                                 <p><strong>2. 内容可复用：</strong>写清背景、过程、结果和建议。</p>
-                                <p><strong>3. 链接可核验：</strong>外部岗位或资料请附原始链接。</p>
+                                <p><strong>3. 链接可核验：</strong>外部岗位或社媒资料请附原始链接。</p>
                                 <p><strong>4. 注意隐私：</strong>不要上传身份证、手机号、邮箱、合同等敏感信息。</p>
                             </div>
                         </div>
@@ -392,29 +418,14 @@
                                 <button onClick={() => setIsModalOpen(true)} className="rounded-xl bg-blue-700 text-white px-5 py-3 font-bold hover:bg-blue-800 focus-ring">发布实习经验</button>
                             </div>
                             <input value={postQuery} onChange={e => setPostQuery(e.target.value)} placeholder="搜索岗位、公司、专业、面试、简历、关键词..." className="focus-ring w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none" />
-                            <div className="mt-4 flex flex-wrap gap-2">
-                                <button onClick={() => setActiveMajor('all')} className={`rounded-full px-3 py-1.5 text-sm font-bold border ${activeMajor === 'all' ? 'bg-slate-900 text-white border-slate-900' : 'chip'}`}>全部专业</button>
-                                {MAJORS.map(major => <button key={major.id} onClick={() => setActiveMajor(major.id)} className={`rounded-full px-3 py-1.5 text-sm font-bold border ${activeMajor === major.id ? 'bg-slate-900 text-white border-slate-900' : 'chip'}`}>{major.label}</button>)}
-                            </div>
-                            <div className="mt-3 flex flex-wrap gap-2">
-                                {postTypes.map(type => <button key={type} onClick={() => setActiveType(type)} className={`rounded-full px-3 py-1.5 text-xs font-bold border ${activeType === type ? 'bg-blue-700 text-white border-blue-700' : 'chip'}`}>{type === 'all' ? '全部类型' : type}</button>)}
-                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2"><button onClick={() => setActiveMajor('all')} className={`rounded-full px-3 py-1.5 text-sm font-bold border ${activeMajor === 'all' ? 'bg-slate-900 text-white border-slate-900' : 'chip'}`}>全部专业</button>{MAJORS.map(major => <button key={major.id} onClick={() => setActiveMajor(major.id)} className={`rounded-full px-3 py-1.5 text-sm font-bold border ${activeMajor === major.id ? 'bg-slate-900 text-white border-slate-900' : 'chip'}`}>{major.label}</button>)}</div>
+                            <div className="mt-3 flex flex-wrap gap-2">{postTypes.map(type => <button key={type} onClick={() => setActiveType(type)} className={`rounded-full px-3 py-1.5 text-xs font-bold border ${activeType === type ? 'bg-blue-700 text-white border-blue-700' : 'chip'}`}>{type === 'all' ? '全部类型' : type}</button>)}</div>
                         </div>
-
                         {loadingPosts ? <div className="surface rounded-2xl p-8 text-center text-slate-500">正在读取帖子...</div> : filteredPosts.length === 0 ? <div className="surface rounded-2xl p-10 text-center"><h3 className="font-extrabold text-lg">暂时没有匹配内容</h3><p className="text-sm text-slate-500 mt-2">可以换个关键词，或发布一篇新的实习经验。</p></div> : filteredPosts.map(post => <PostCard key={post.id} post={post} />)}
                     </div>
-
                     <aside className="space-y-4 lg:sticky lg:top-24">
-                        <div className="surface rounded-2xl p-5">
-                            <h3 className="font-extrabold mb-3">三专业内容概览</h3>
-                            <div className="space-y-3">{dashboard.majors.map(major => <button key={major.id} onClick={() => setActiveMajor(major.id)} className="w-full text-left rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 hover:bg-white">
-                                <div className="flex justify-between text-sm font-bold"><span>{major.label}</span><span>{major.count}</span></div>
-                            </button>)}</div>
-                        </div>
-                        <div className="surface rounded-2xl p-5">
-                            <h3 className="font-extrabold mb-3">推荐发帖模板</h3>
-                            <p className="text-sm text-slate-500 leading-relaxed">岗位背景 -> 申请过程 -> 面试问题 -> 准备材料 -> 结果反馈 -> 给后来者的建议。</p>
-                        </div>
+                        <div className="surface rounded-2xl p-5"><h3 className="font-extrabold mb-3">三专业内容概览</h3><div className="space-y-3">{dashboard.majors.map(major => <button key={major.id} onClick={() => setActiveMajor(major.id)} className="w-full text-left rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 hover:bg-white"><div className="flex justify-between text-sm font-bold"><span>{major.label}</span><span>{major.count}</span></div></button>)}</div></div>
+                        <div className="surface rounded-2xl p-5"><h3 className="font-extrabold mb-3">推荐发帖模板</h3><p className="text-sm text-slate-500 leading-relaxed">岗位背景 -> 申请过程 -> 面试问题 -> 准备材料 -> 结果反馈 -> 给后来者的建议。</p></div>
                     </aside>
                 </div>;
             }
@@ -427,81 +438,66 @@
                     <div className="text-slate-700 text-sm leading-relaxed whitespace-pre-wrap mb-4">{renderContentWithLinks(post.content)}</div>
                     {post.image && <img src={post.image} alt="帖子配图" className="mb-4 max-h-80 rounded-xl border border-slate-100 object-contain" />}
                     {post.pdf && <div className="mb-4"><div className="mb-2 text-sm font-bold text-slate-600">附件：<a className="text-blue-700 underline" href={post.pdf.data} download={post.pdf.name}>{post.pdf.name}</a></div><iframe src={post.pdf.data} className="pdf-preview-container"></iframe></div>}
-                    <div className="border-t border-slate-100 pt-4 flex gap-4">
-                        <button onClick={() => handleLike(post.id)} className="text-sm font-bold text-slate-500 hover:text-blue-700">赞同 {post.likes || 0}</button>
-                        <button onClick={() => setActiveCommentPostId(activeCommentPostId === post.id ? null : post.id)} className="text-sm font-bold text-slate-500 hover:text-blue-700">评论 {(post.comments && post.comments.length) || 0}</button>
-                    </div>
+                    <div className="border-t border-slate-100 pt-4 flex gap-4"><button onClick={() => handleLike(post.id)} className="text-sm font-bold text-slate-500 hover:text-blue-700">赞同 {post.likes || 0}</button><button onClick={() => setActiveCommentPostId(activeCommentPostId === post.id ? null : post.id)} className="text-sm font-bold text-slate-500 hover:text-blue-700">评论 {(post.comments && post.comments.length) || 0}</button></div>
                     {post.comments && post.comments.length > 0 && <div className="mt-4 rounded-xl bg-slate-50 border border-slate-100 p-3 space-y-2">{post.comments.map(comment => <p key={comment.id} className="text-sm"><strong>{comment.author}：</strong>{comment.text}</p>)}</div>}
-                    {activeCommentPostId === post.id && <div className="mt-4 rounded-xl bg-slate-50 border border-slate-100 p-3 space-y-2">
-                        <input value={commentAuthor} onChange={e => setCommentAuthor(e.target.value)} placeholder="昵称（可选）" className="focus-ring w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none" />
-                        <div className="flex gap-2"><input value={commentText} onChange={e => setCommentText(e.target.value)} placeholder="补充建议、追问或反馈..." className="focus-ring flex-1 rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none" /><button onClick={() => submitComment(post.id)} className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white">发送</button></div>
-                    </div>}
+                    {activeCommentPostId === post.id && <div className="mt-4 rounded-xl bg-slate-50 border border-slate-100 p-3 space-y-2"><input value={commentAuthor} onChange={e => setCommentAuthor(e.target.value)} placeholder="昵称（可选）" className="focus-ring w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none" /><div className="flex gap-2"><input value={commentText} onChange={e => setCommentText(e.target.value)} placeholder="补充建议、追问或反馈..." className="focus-ring flex-1 rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none" /><button onClick={() => submitComment(post.id)} className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white">发送</button></div></div>}
                 </article>;
             }
 
             function RadarView() {
                 const groupedRadar = MAJORS.map(major => ({ ...major, items: radarItems.filter(item => item.major === major.id) }));
                 return <div className="fade-in space-y-5">
-                    <div className="surface rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div><h2 className="text-2xl font-extrabold">实习资源雷达</h2><p className="text-sm text-slate-500 mt-1">自动抓取公开招聘页面的岗位标题和链接，并按三个专业整理。抓取结果需以原网站为准。</p></div>
-                        <button onClick={scanInternshipSources} disabled={radarStatus === 'loading'} className="rounded-xl bg-blue-700 text-white px-5 py-3 font-bold hover:bg-blue-800 disabled:opacity-60 focus-ring">{radarStatus === 'loading' ? '正在抓取...' : '抓取最新资源'}</button>
-                    </div>
+                    <div className="surface rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4"><div><h2 className="text-2xl font-extrabold">实习资源雷达</h2><p className="text-sm text-slate-500 mt-1">自动抓取公开招聘页面的岗位标题和链接，并按三个专业整理。抓取结果需以原网站为准。</p></div><button onClick={scanInternshipSources} disabled={radarStatus === 'loading'} className="rounded-xl bg-blue-700 text-white px-5 py-3 font-bold hover:bg-blue-800 disabled:opacity-60 focus-ring">{radarStatus === 'loading' ? '正在抓取...' : '抓取最新资源'}</button></div>
                     <div className="text-sm text-slate-500">上次整理：{lastScan}</div>
-                    <div className="grid lg:grid-cols-3 gap-4">
-                        {groupedRadar.map(group => <section key={group.id} className="surface rounded-2xl p-5">
-                            <div className="flex items-center justify-between mb-4"><MajorBadge id={group.id} /><span className="text-sm text-slate-500">{group.items.length} 条</span></div>
-                            <div className="space-y-3">{group.items.map((item, index) => <a key={item.title + index} href={item.url} target="_blank" rel="noopener noreferrer" className="block rounded-xl border border-slate-100 bg-slate-50 p-4 hover:bg-white hover:border-blue-200">
-                                <p className="font-bold text-slate-900 line-clamp-2">{item.title}</p>
-                                <p className="text-xs text-slate-400 mt-2">{item.source}</p>
-                                <p className="text-sm text-slate-500 mt-2 line-clamp-3">{item.summary}</p>
-                            </a>)}</div>
-                        </section>)}
+                    <div className="grid lg:grid-cols-3 gap-4">{groupedRadar.map(group => <section key={group.id} className="surface rounded-2xl p-5"><div className="flex items-center justify-between mb-4"><MajorBadge id={group.id} /><span className="text-sm text-slate-500">{group.items.length} 条</span></div><div className="space-y-3">{group.items.map((item, index) => <a key={item.title + index} href={item.url} target="_blank" rel="noopener noreferrer" className="block rounded-xl border border-slate-100 bg-slate-50 p-4 hover:bg-white hover:border-blue-200"><p className="font-bold text-slate-900 line-clamp-2">{item.title}</p><p className="text-xs text-slate-400 mt-2">{item.source}</p><p className="text-sm text-slate-500 mt-2 line-clamp-3">{item.summary}</p></a>)}</div></section>)}</div>
+                    <div className="surface rounded-2xl p-5 text-sm text-slate-600 leading-relaxed"><strong>发布级说明：</strong>静态网站会优先尝试实时抓取；若来源限制跨站访问，则保留原站搜索入口，确保用户能核验岗位时效。</div>
+                </div>;
+            }
+
+            function SocialView() {
+                const grouped = MAJORS.map(major => ({ ...major, items: filteredSocial.filter(item => (item.major || classifyMajor(item)) === major.id) }));
+                return <div className="fade-in space-y-5">
+                    <div className="surface rounded-2xl p-5">
+                        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+                            <div><h2 className="text-2xl font-extrabold">社媒经验库</h2><p className="text-sm text-slate-500 mt-2 leading-relaxed max-w-2xl">整理小红书、抖音、哔哩哔哩上的实习经验入口。由于这些平台普遍限制前端跨站抓取，这里采用“搜索入口 + 手动收录链接 + 自动专业归类”的发布级方案。</p></div>
+                            <div className="rounded-xl bg-slate-50 border border-slate-100 p-4 text-sm text-slate-600 leading-relaxed max-w-sm"><strong>收录原则：</strong>只保存标题、摘要、平台和原始链接，不搬运正文、图片或评论，避免版权和平台规则风险。</div>
+                        </div>
                     </div>
-                    <div className="surface rounded-2xl p-5 text-sm text-slate-600 leading-relaxed">
-                        <strong>发布级说明：</strong>由于静态网站无法稳定绕过所有招聘网站的反爬与跨站限制，资源雷达会优先尝试实时抓取；若某来源限制访问，则自动保留原站搜索入口，确保用户仍能进入公开页面核验岗位时效。
+
+                    <div className="grid lg:grid-cols-[1fr_360px] gap-5 items-start">
+                        <section className="surface rounded-2xl p-5">
+                            <div className="grid md:grid-cols-3 gap-3 mb-4"><input value={socialQuery} onChange={e => setSocialQuery(e.target.value)} placeholder="搜索社媒经验、平台或专业关键词..." className="focus-ring md:col-span-3 rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none" /><select value={socialMajor} onChange={e => setSocialMajor(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none"><option value="all">全部专业</option>{MAJORS.map(major => <option key={major.id} value={major.id}>{major.label}</option>)}</select><select value={socialPlatform} onChange={e => setSocialPlatform(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none"><option value="all">全部平台</option>{PLATFORMS.map(platform => <option key={platform.id} value={platform.id}>{platform.label}</option>)}</select><button onClick={() => { setSocialQuery(''); setSocialMajor('all'); setSocialPlatform('all'); }} className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50">重置筛选</button></div>
+                            <div className="grid lg:grid-cols-3 gap-4">{grouped.map(group => <div key={group.id} className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4"><div className="mb-4 flex items-center justify-between"><MajorBadge id={group.id} /><span className="text-sm text-slate-500">{group.items.length} 条</span></div><div className="space-y-3">{group.items.map(item => <SocialCard key={(item.id || item.title) + item.platform} item={item} />)}</div></div>)}</div>
+                        </section>
+                        <aside className="surface rounded-2xl p-5 lg:sticky lg:top-24">
+                            <h3 className="text-lg font-extrabold mb-3">手动收录社媒链接</h3>
+                            <form onSubmit={addSocialLink} className="space-y-3">
+                                <input name="title" required placeholder="标题：如 安全工程EHS实习面经" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none" />
+                                <input name="url" required placeholder="粘贴小红书/抖音/B站公开链接" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none" />
+                                <div className="grid grid-cols-2 gap-2"><select name="platform" className="focus-ring rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none">{PLATFORMS.map(platform => <option key={platform.id} value={platform.id}>{platform.label}</option>)}</select><select name="major" className="focus-ring rounded-xl border border-slate-200 px-3 py-3 text-sm outline-none">{MAJORS.map(major => <option key={major.id} value={major.id}>{major.label}</option>)}</select></div>
+                                <textarea name="note" rows="4" placeholder="摘要：为什么值得看？适合哪个岗位/方向？" className="focus-ring w-full resize-none rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none"></textarea>
+                                <button type="submit" className="w-full rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800">收录链接</button>
+                            </form>
+                            <p className="mt-4 text-xs text-slate-500 leading-relaxed">手动收录会保存在当前浏览器本地，适合先做发布演示。若后续需要多人共享，可升级为 Supabase 专门表。</p>
+                        </aside>
                     </div>
                 </div>;
+            }
+
+            function SocialCard({ item }) {
+                const platform = getPlatform(item.platform);
+                const major = item.major || classifyMajor(item);
+                return <div className="rounded-xl bg-white border border-slate-100 p-4"><div className="flex flex-wrap gap-2 mb-3"><MajorBadge id={major} /><PlatformBadge id={item.platform} />{item.sourceType === 'manual' && <span className="rounded-full bg-violet-50 text-violet-700 border border-violet-100 px-2.5 py-1 text-xs font-bold">手动收录</span>}</div><a href={item.url || platform.buildSearch(item.query)} target="_blank" rel="noopener noreferrer" className="font-extrabold text-slate-900 hover:text-blue-700 line-clamp-2">{item.title}</a><p className="mt-2 text-sm text-slate-500 line-clamp-3">{item.note || '打开原平台查看完整经验。'}</p><div className="mt-3 flex items-center justify-between text-xs text-slate-400"><span>{item.createdAt || '搜索入口'}</span>{item.sourceType === 'manual' && <button onClick={() => removeSocialLink(item.id)} className="font-bold text-rose-600 hover:underline">移除</button>}</div></div>;
             }
 
             function PostModal() {
-                return <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm">
-                    <div className="surface w-full max-w-2xl rounded-2xl overflow-hidden">
-                        <div className="flex items-center justify-between border-b border-slate-100 p-5"><h2 className="text-xl font-extrabold">发布实习经验</h2><button onClick={() => setIsModalOpen(false)} className="text-2xl text-slate-400 hover:text-slate-800">×</button></div>
-                        <form onSubmit={handlePost} className="p-5 space-y-4">
-                            <input name="title" required placeholder="标题：如 新能源企业EHS实习一面复盘" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none" />
-                            <div className="grid md:grid-cols-2 gap-3">
-                                <select name="major" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none">{MAJORS.map(major => <option key={major.id} value={major.id}>{major.label}</option>)}</select>
-                                <input name="author" placeholder="昵称 / 年级（可选）" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none" />
-                            </div>
-                            <textarea name="content" required rows="6" placeholder="建议包含：岗位背景、投递方式、准备材料、面试问题、结果反馈、给后来者的建议。可直接粘贴公开链接。" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none resize-none"></textarea>
-                            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                <p className="text-sm font-bold text-slate-600 mb-3">附件（二选一，公开发布前请去除个人隐私）</p>
-                                <div className="grid md:grid-cols-2 gap-3">
-                                    <label className="cursor-pointer rounded-xl border border-dashed border-slate-300 bg-white p-4 text-center text-sm font-bold text-slate-600 hover:border-blue-300">上传图片<input type="file" accept="image/*" className="hidden" onChange={(e) => handleFileUpload(e, 'image')} /></label>
-                                    <label className="cursor-pointer rounded-xl border border-dashed border-slate-300 bg-white p-4 text-center text-sm font-bold text-slate-600 hover:border-blue-300">上传PDF<input type="file" accept="application/pdf" className="hidden" onChange={(e) => handleFileUpload(e, 'pdf')} /></label>
-                                </div>
-                                {(uploadedImg || uploadedPdf) && <p className="mt-3 text-sm text-blue-700 font-bold">附件已就绪。<button type="button" onClick={() => { setUploadedImg(null); setUploadedPdf(null); }} className="ml-2 underline">移除</button></p>}
-                            </div>
-                            <button type="submit" className="w-full rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-ring">发布到社区</button>
-                        </form>
-                    </div>
-                </div>;
+                return <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm"><div className="surface w-full max-w-2xl rounded-2xl overflow-hidden"><div className="flex items-center justify-between border-b border-slate-100 p-5"><h2 className="text-xl font-extrabold">发布实习经验</h2><button onClick={() => setIsModalOpen(false)} className="text-2xl text-slate-400 hover:text-slate-800">×</button></div><form onSubmit={handlePost} className="p-5 space-y-4"><input name="title" required placeholder="标题：如 新能源企业EHS实习一面复盘" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none" /><div className="grid md:grid-cols-2 gap-3"><select name="major" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none">{MAJORS.map(major => <option key={major.id} value={major.id}>{major.label}</option>)}</select><input name="author" placeholder="昵称 / 年级（可选）" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none" /></div><textarea name="content" required rows="6" placeholder="建议包含：岗位背景、投递方式、准备材料、面试问题、结果反馈、给后来者的建议。可直接粘贴公开链接。" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none resize-none"></textarea><div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-sm font-bold text-slate-600 mb-3">附件（二选一，公开发布前请去除个人隐私）</p><div className="grid md:grid-cols-2 gap-3"><label className="cursor-pointer rounded-xl border border-dashed border-slate-300 bg-white p-4 text-center text-sm font-bold text-slate-600 hover:border-blue-300">上传图片<input type="file" accept="image/*" className="hidden" onChange={(e) => handleFileUpload(e, 'image')} /></label><label className="cursor-pointer rounded-xl border border-dashed border-slate-300 bg-white p-4 text-center text-sm font-bold text-slate-600 hover:border-blue-300">上传PDF<input type="file" accept="application/pdf" className="hidden" onChange={(e) => handleFileUpload(e, 'pdf')} /></label></div>{(uploadedImg || uploadedPdf) && <p className="mt-3 text-sm text-blue-700 font-bold">附件已就绪。<button type="button" onClick={() => { setUploadedImg(null); setUploadedPdf(null); }} className="ml-2 underline">移除</button></p>}</div><button type="submit" className="w-full rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-ring">发布到社区</button></form></div></div>;
             }
 
             return <div className="min-h-screen">
-                <header className="nav-glass sticky top-0 z-50">
-                    <div className="shell flex h-16 items-center justify-between">
-                        <button onClick={() => setView('dashboard')} className="text-left"><p className="text-base font-extrabold text-slate-900">资安实习互助平台</p><p className="text-xs text-slate-500">Safety · Mining · Underground Space</p></button>
-                        <nav className="flex gap-2"><NavButton id="dashboard" label="首页" /><NavButton id="guide" label="指南" /><NavButton id="community" label="社区" /><NavButton id="radar" label="资源雷达" /></nav>
-                    </div>
-                </header>
-                <main className="shell py-8">
-                    {view === 'dashboard' && <DashboardView />}
-                    {view === 'guide' && <GuideView />}
-                    {view === 'community' && <CommunityView />}
-                    {view === 'radar' && <RadarView />}
-                </main>
-                <footer className="shell pb-8 text-center text-xs text-slate-400">CSU Internship Hub · 学生互助原型平台 · 请以招聘原网站信息为准</footer>
+                <header className="nav-glass sticky top-0 z-50"><div className="shell flex h-16 items-center justify-between gap-4"><button onClick={() => setView('dashboard')} className="text-left shrink-0"><p className="text-base font-extrabold text-slate-900">资安实习互助平台</p><p className="text-xs text-slate-500">Safety · Mining · Underground Space</p></button><nav className="flex gap-2 overflow-x-auto"><NavButton id="dashboard" label="首页" /><NavButton id="guide" label="指南" /><NavButton id="community" label="社区" /><NavButton id="radar" label="资源雷达" /><NavButton id="social" label="社媒经验库" /></nav></div></header>
+                <main className="shell py-8">{view === 'dashboard' && <DashboardView />}{view === 'guide' && <GuideView />}{view === 'community' && <CommunityView />}{view === 'radar' && <RadarView />}{view === 'social' && <SocialView />}</main>
+                <footer className="shell pb-8 text-center text-xs text-slate-400">CSU Internship Hub · 学生互助原型平台 · 招聘与社媒内容请以原平台信息为准</footer>
                 {isModalOpen && <PostModal />}
             </div>;
         }
