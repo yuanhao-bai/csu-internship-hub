@@ -1,105 +1,86 @@
 # CSU Internship Hub
 
-CSU Internship Hub is a lightweight web-based internship guidance and peer-support platform designed for students in the School of Resources and Safety Engineering at Central South University. The project focuses on students majoring in Safety Engineering, Mining Engineering, and Urban Underground Space Engineering, where internship preparation is often affected by fragmented information, limited peer experience sharing, and unequal access to practical career guidance.
+CSU Internship Hub is a web-based internship guidance and peer-support platform designed for students in the School of Resources and Safety Engineering at Central South University. It focuses on three discipline areas: Safety Engineering, Mining Engineering, and Urban Underground Space Engineering.
 
-Rather than serving only as a static information page, this repository presents an early-stage digital support system prototype for engineering education. It explores how a discipline-specific online platform can help undergraduate students understand career pathways, prepare for internship applications, and transform individual internship experience into reusable peer knowledge.
+The project addresses a common problem in engineering education: internship information is often scattered across informal chats, recruitment websites, senior students' personal notes, and short-lived social media posts. CSU Internship Hub turns these fragmented resources into a structured, searchable, and discipline-specific support platform.
 
-## Project Motivation
+## Current Release
 
-Students in engineering disciplines often rely on scattered sources when preparing for internships: informal conversations, senior students' personal notes, WeChat groups, recruitment posts, and fragmented online materials. This creates several challenges:
+The current version has been upgraded from a simple prototype into a more publishable single-page web application. It now includes a mature landing dashboard, discipline-specific guidance, a peer community, automatic post classification, and an internship resource radar that helps collect and organize public internship links for the three majors.
 
-- internship information is difficult to organize and compare;
-- lower-year students may lack access to reliable peer experience;
-- students often prepare resumes and interviews without discipline-specific guidance;
-- valuable internship experience is easily lost after each cohort graduates;
-- generic career platforms rarely reflect the needs of specialized engineering majors.
+## Core Features
 
-CSU Internship Hub was built to address these issues through a focused, low-barrier platform that combines structured guidance with community-based knowledge sharing.
+- **Release-ready dashboard**: Provides a clearer entry point with platform positioning, community statistics, latest posts, and posting quality standards.
+- **Three-major structure**: Organizes content around Safety Engineering, Mining Engineering, and Urban Underground Space Engineering.
+- **Guidance hub**: Summarizes preparation pathways, resume readiness, interview strategy, and major-specific skills.
+- **Peer community**: Supports posting, searching, liking, commenting, image upload, and PDF preview.
+- **Automatic post classification**: Existing and newly published posts are automatically grouped by major and content type based on keywords.
+- **Internship resource radar**: Attempts to fetch public internship-related postings from external recruitment pages and organizes them by the three majors. If a website restricts cross-site crawling, the platform keeps a verified search entry so users can open the original source directly.
+- **Publication safeguards**: Adds clearer quality requirements for public posts and reminds users to avoid uploading sensitive personal information.
 
 ## Research Relevance
 
-This project can be positioned as a practice-based research prototype for PhD applications in areas such as engineering education, educational technology, human-computer interaction, digital learning environments, and career readiness support.
+This project can be positioned as a practice-based research prototype for PhD applications in engineering education, educational technology, human-computer interaction, digital learning environments, and career readiness support.
 
 Potential research themes include:
 
 - digital support systems for engineering students' career development;
 - peer knowledge sharing and experience transfer in higher education;
-- human-computer interaction design for student-facing educational platforms;
 - discipline-specific information organization for internship preparation;
-- data-informed analysis of students' career concerns and preparation behaviors.
+- lightweight web platforms for student-facing educational support;
+- data-informed analysis of students' internship concerns and preparation behavior.
 
 A possible research question derived from this project is:
 
 > How can a discipline-specific digital platform reduce information asymmetry and improve internship preparedness among undergraduate engineering students?
 
-## Key Features
-
-- **Structured Guidance Hub**: Provides curated guidance on major-specific career pathways, internship preparation, resume and interview strategies, common pitfalls, and a 90-day preparation plan.
-- **Peer Community Space**: Allows students to publish experience posts, resource-sharing posts, and questions, helping individual experience become a reusable community knowledge base.
-- **Searchable Content**: Supports keyword search across both the guidance section and community posts.
-- **Multimedia Resource Sharing**: Supports image and PDF attachments, enabling students to share resume samples, interview notes, checklists, or other practical materials.
-- **Interaction Mechanisms**: Includes likes and comments to encourage discussion, feedback, and peer support.
-- **Basic Moderation Support**: Provides a simple administrator deletion function for maintaining content quality during the prototype stage.
-
 ## Technical Implementation
-
-The current version is implemented as a lightweight single-page web application, prioritizing fast prototyping and low deployment cost.
 
 | Component | Implementation |
 | --- | --- |
 | Frontend | React 18 via CDN |
 | Styling | Tailwind CSS via CDN and custom CSS |
 | Backend-as-a-Service | Supabase |
-| Application Structure | Single-file `index.html` prototype |
-| Core Interactions | Search, posting, commenting, likes, image/PDF preview |
+| Application Structure | Single-file `index.html` web app |
+| Community Data | Supabase `posts` table |
+| Resource Collection | Client-side public page fetching with fallback source links |
+| Core Interactions | Search, posting, commenting, likes, image/PDF preview, major classification, resource radar |
 
-This architecture makes the project easy to demonstrate, iterate, and deploy as an early-stage research prototype. It also leaves room for future migration to a more structured frontend framework and a more secure backend architecture.
-
-## Why This Matters for a PhD Application
-
-For research applications, the value of this project lies not only in its technical implementation but also in the way it connects a real student problem with a concrete, testable digital intervention.
-
-The project demonstrates:
-
-1. **Problem awareness**: It identifies a specific information gap in engineering students' internship preparation.
-2. **User-centered thinking**: It is designed around the needs of students in specialized engineering majors rather than a general job-search audience.
-3. **Prototype-driven research ability**: It translates an observed educational problem into an interactive system prototype.
-4. **Potential for empirical evaluation**: It can be extended into user interviews, surveys, usability testing, and behavioral data analysis.
-5. **Scalability of research context**: The model could be adapted from one school or major group to other engineering disciplines or institutions.
+The project intentionally remains lightweight so that it can be deployed through static hosting services such as GitHub Pages, Netlify, or Vercel. This makes it suitable for fast iteration, user testing, and portfolio demonstration.
 
 ## Usage
 
-The project is currently a single-file frontend prototype. It can be previewed by opening `index.html` directly in a browser.
+The project is currently a single-file frontend application. It can be previewed by opening `index.html` directly in a browser, or deployed through a static hosting service.
 
 ```text
 1. Clone or download this repository.
 2. Open index.html in a browser.
-3. Explore the guidance hub or use the community space to publish and discuss posts.
+3. Explore the dashboard, guidance hub, community, and resource radar.
 ```
 
-For online deployment, the project can be hosted on GitHub Pages, Netlify, Vercel, or other static hosting services.
+For online deployment, GitHub Pages is the simplest option for this repository structure.
 
-## Potential Evaluation Plan
+## Evaluation Plan
 
 To further develop this project into a research-oriented study, the following evaluation methods can be considered:
 
-- **Student Interviews**: Interview students from different years to understand how they currently obtain internship information and what barriers they face.
-- **Questionnaire Study**: Measure students' perceived preparedness, information sufficiency, and confidence before and after using the platform.
-- **Usability Testing**: Observe how efficiently students complete tasks such as finding a career pathway, preparing for an interview, or publishing an experience post.
-- **Behavioral Data Analysis**: Analyze search keywords, post categories, comment interactions, and resource access patterns to understand students' practical concerns.
-- **Comparative Study**: Compare the platform-supported preparation process with traditional fragmented information-seeking methods.
+- **Student interviews**: Understand how students currently obtain internship information and what barriers they face.
+- **Questionnaire study**: Measure students' perceived preparedness, information sufficiency, and confidence before and after using the platform.
+- **Usability testing**: Observe how efficiently students complete tasks such as finding a career pathway, preparing for an interview, or publishing an experience post.
+- **Behavioral data analysis**: Analyze search keywords, post categories, comment interactions, and resource access patterns.
+- **Comparative study**: Compare the platform-supported preparation process with traditional fragmented information-seeking methods.
 
 ## Future Work
 
-- Add user authentication and role-based access control.
-- Move administrator authentication and sensitive logic to a more secure backend design.
-- Configure Supabase Row Level Security policies for safer data operations.
-- Introduce structured post categories, tags, and moderation workflows.
-- Add an analytics dashboard for identifying common internship concerns and career interests.
-- Improve mobile responsiveness and accessibility.
-- Conduct formal usability testing with students from relevant majors.
-- Extend the platform model to other schools, departments, or engineering disciplines.
+- Add secure user authentication and role-based access control.
+- Move sensitive moderation logic to backend services or Supabase Row Level Security policies.
+- Add a formal moderation queue for public posts.
+- Improve the external resource crawler with a server-side scheduled job.
+- Add a data dashboard for internship trends across the three majors.
+- Improve mobile accessibility and visual consistency.
+- Conduct formal usability testing with students from the target majors.
+- Extend the model to other schools, departments, or engineering disciplines.
 
 ## Project Status
 
-This repository is currently an early-stage prototype. Its primary goal is to validate the concept, demonstrate the interaction flow, and provide a foundation for future research-oriented development. With further improvements in data security, content governance, user evaluation, and deployment, the project could evolve from a portfolio prototype into a practical student-support platform and a case study for research in engineering education and educational technology.
+This repository is currently a release-oriented student support platform prototype. It is suitable for public demonstration and early user feedback, while still leaving room for stronger backend security, automated data pipelines, and formal research evaluation.
