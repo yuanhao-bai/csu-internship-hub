@@ -77,9 +77,19 @@ create policy "signed in users can write own login events"
   on public.login_events for insert
   with check (auth.uid() = user_id);
 
--- Optional: if your posts table already exists, keep the table and only apply this admin read policy.
--- Adjust policy names if your project already has different post policies.
+-- Community posts are public content on the classmate-facing site.
+-- Keep these public read/insert policies if students should be able to read and submit posts without logging in.
 alter table public.posts enable row level security;
+
+drop policy if exists "public can read community posts" on public.posts;
+create policy "public can read community posts"
+  on public.posts for select
+  using (true);
+
+drop policy if exists "public can create community posts" on public.posts;
+create policy "public can create community posts"
+  on public.posts for insert
+  with check (true);
 
 drop policy if exists "admins can view all posts" on public.posts;
 create policy "admins can view all posts"
