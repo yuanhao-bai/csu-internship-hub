@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "scrape": "node scripts/scrape-feeds.mjs"
+    "scrape": "node scripts/update-feeds.mjs"
   },
   "engines": {
     "node": ">=20"
