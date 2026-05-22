@@ -1,0 +1,12 @@
+{
+  "name": "csu-internship-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape-feeds.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
