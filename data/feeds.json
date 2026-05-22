@@ -1,0 +1,38 @@
+{
+  "generatedAt": "manual-seed",
+  "items": [
+    {
+      "id": "seed-safety-ehs",
+      "major": "safety",
+      "category": "job",
+      "platform": "精选方向",
+      "source": "Seed",
+      "title": "EHS / HSE 实习：制造、新能源、化工、施工企业优先关注",
+      "summary": "适合安全工程学生积累体系管理、隐患排查、培训、事故案例复盘和现场沟通经验。",
+      "url": "https://www.shixiseng.com/interns?keyword=EHS%E5%AE%9E%E4%B9%A0",
+      "status": "seed"
+    },
+    {
+      "id": "seed-mining-smart-mine",
+      "major": "mining",
+      "category": "job",
+      "platform": "精选方向",
+      "source": "Seed",
+      "title": "智能矿山 / 矿业数字化实习：关注建模、调度与安全监测",
+      "summary": "适合采矿工程学生展示 CAD、三维建模、通风安全、生产调度和现场理解能力。",
+      "url": "https://www.shixiseng.com/interns?keyword=%E6%99%BA%E8%83%BD%E7%9F%BF%E5%B1%B1",
+      "status": "seed"
+    },
+    {
+      "id": "seed-underground-shield",
+      "major": "underground",
+      "category": "job",
+      "platform": "精选方向",
+      "source": "Seed",
+      "title": "盾构 / 隧道 / 地铁工程实习：关注施工、监测和资料管理",
+      "summary": "适合城市地下空间工程学生积累项目现场、BIM 协同、监测数据和工程文档经验。",
+      "url": "https://www.shixiseng.com/interns?keyword=%E7%9B%BE%E6%9E%84%E5%AE%9E%E4%B9%A0",
+      "status": "seed"
+    }
+  ]
+}
