@@ -1,0 +1,30 @@
+name: Update internship feeds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 22 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-feeds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Scrape public internship feeds
+        run: npm run scrape
+
+      - name: Commit updated feed data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update automated internship feed data
+          file_pattern: data/feeds.json
