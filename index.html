@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="中南大学资源与安全工程学院实习互助平台，自动整理小红书、抖音、B站和实习就业网站的公开实习信息。" />
-  <title>CSU资安院实习互助平台</title>
+  <meta name="description" content="面向中南大学资源与安全工程学院同学的实习信息互助网站，整理三类专业相关实习、就业信息与同学经验。" />
+  <title>资安实习互助站</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -12,21 +12,21 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-    :root { --ink:#172033; --line:#d9e2ec; --brand:#1f6feb; }
+    :root { --ink:#172033; --muted:#5d6b7c; --line:#d9e2ec; --brand:#1769aa; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:linear-gradient(180deg,#f7fbff 0%,#eef4f9 48%,#f8fafc 100%); }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#f6f8fb; }
     button,input,select,textarea { font:inherit; }
     .shell { max-width:1180px; margin:0 auto; padding:0 20px; }
-    .nav-glass { background:rgba(255,255,255,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
-    .surface { background:rgba(255,255,255,.96); border:1px solid var(--line); box-shadow:0 18px 45px -34px rgba(15,23,42,.45); }
-    .hero { background:linear-gradient(135deg,#0f2f57 0%,#1464a5 48%,#1f7a70 100%); }
-    .tab-active { color:#0f5fb5; border-bottom:3px solid #0f5fb5; }
+    .topbar { background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
+    .surface { background:#fff; border:1px solid var(--line); box-shadow:0 18px 50px -42px rgba(15,23,42,.55); }
+    .hero { background:linear-gradient(135deg,#12324c 0%,#1769aa 52%,#16836f 100%); }
+    .nav-active { color:#0f5fb5; border-bottom-color:#0f5fb5; }
     .chip { border:1px solid #dbe7f3; background:#f7fbff; color:#34516f; }
-    .fade-in { animation:fadeIn .24s ease-out; }
+    .focus-ring:focus { outline:3px solid rgba(23,105,170,.22); outline-offset:2px; }
+    .fade-in { animation:fadeIn .22s ease-out; }
     @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
     .line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
     .line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
-    .focus-ring:focus { outline:3px solid rgba(31,111,235,.22); outline-offset:2px; }
   </style>
 </head>
 <body>
@@ -41,27 +41,25 @@
     );
 
     const MAJORS = [
-      { id:'all', label:'全部专业', tone:'bg-slate-100 text-slate-700 border-slate-200' },
-      { id:'safety', label:'安全工程', tone:'bg-blue-50 text-blue-700 border-blue-100', tracks:['EHS/HSE','安全评价','应急管理','施工安全'] },
-      { id:'mining', label:'采矿工程', tone:'bg-amber-50 text-amber-800 border-amber-100', tracks:['智能矿山','矿山安全','通风爆破','生产调度'] },
-      { id:'underground', label:'城市地下空间工程', tone:'bg-emerald-50 text-emerald-800 border-emerald-100', tracks:['盾构施工','地铁工程','基坑监测','BIM协同'] }
+      { id:'all', label:'全部方向', short:'全部', tone:'bg-slate-100 text-slate-700 border-slate-200' },
+      { id:'safety', label:'安全工程', short:'安全', tone:'bg-blue-50 text-blue-700 border-blue-100', tracks:['EHS/HSE','安全评价','应急管理','施工安全'] },
+      { id:'mining', label:'采矿工程', short:'采矿', tone:'bg-amber-50 text-amber-800 border-amber-100', tracks:['智能矿山','矿山安全','通风爆破','生产调度'] },
+      { id:'underground', label:'城市地下空间工程', short:'地下空间', tone:'bg-emerald-50 text-emerald-800 border-emerald-100', tracks:['盾构施工','地铁工程','基坑监测','BIM协同'] }
     ];
 
-    const CATEGORY_LABELS = { all:'全部类型', job:'实习就业网站', social:'小红书/抖音/B站' };
-    const FEATURED_SEARCHES = [
-      ['safety','EHS 实习 面经 安全工程'], ['safety','安全评价 实习 简历'],
-      ['mining','采矿工程 实习 矿山 面经'], ['mining','智能矿山 实习 校招'],
-      ['underground','盾构 实习 地铁工程'], ['underground','地下空间工程 基坑监测 实习']
-    ];
-
-    const initialFeed = { generatedAt:'loading', counts:{ total:0 }, items:[] };
+    const CATEGORY_LABELS = { all:'全部来源', job:'招聘/实习网站', social:'经验帖/社媒' };
     const majorById = id => MAJORS.find(item => item.id === id) || MAJORS[0];
-    const sourceTone = item => item.category === 'social' ? 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-100' : 'bg-cyan-50 text-cyan-700 border-cyan-100';
+    const fmtDate = value => {
+      if (!value || value === 'loading' || value === 'fallback') return '等待更新';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleString('zh-CN', { hour12:false });
+    };
     const safeText = value => (value || '').toString();
 
     function App() {
-      const [view, setView] = useState('feeds');
-      const [feed, setFeed] = useState(initialFeed);
+      const [view, setView] = useState('home');
+      const [feed, setFeed] = useState({ generatedAt:'loading', counts:{ total:0 }, items:[] });
       const [feedStatus, setFeedStatus] = useState('loading');
       const [query, setQuery] = useState('');
       const [major, setMajor] = useState('all');
@@ -77,8 +75,7 @@
         try {
           const response = await fetch('data/feeds.json?ts=' + Date.now(), { cache:'no-store' });
           if (!response.ok) throw new Error('feed unavailable');
-          const data = await response.json();
-          setFeed(data);
+          setFeed(await response.json());
           setFeedStatus('ready');
         } catch (error) {
           setFeed({ generatedAt:'fallback', counts:{ total:0 }, items:[] });
@@ -93,16 +90,7 @@
         setPostStatus('ready');
       }
 
-      const filteredItems = useMemo(() => {
-        return (feed.items || []).filter(item => {
-          const blob = [item.title, item.summary, item.source, item.platform, majorById(item.major).label].join(' ').toLowerCase();
-          return (!query || blob.includes(query.toLowerCase())) &&
-            (major === 'all' || item.major === major) &&
-            (category === 'all' || item.category === category);
-        });
-      }, [feed, query, major, category]);
-
-      const dashboard = useMemo(() => {
+      const stats = useMemo(() => {
         const items = feed.items || [];
         return {
           total: items.length,
@@ -114,8 +102,17 @@
         };
       }, [feed]);
 
+      const filteredItems = useMemo(() => {
+        return (feed.items || []).filter(item => {
+          const blob = [item.title, item.summary, item.source, item.platform, majorById(item.major).label].join(' ').toLowerCase();
+          return (!query || blob.includes(query.toLowerCase())) &&
+            (major === 'all' || item.major === major) &&
+            (category === 'all' || item.category === category);
+        });
+      }, [feed, query, major, category]);
+
       function NavButton({ id, label }) {
-        return <button onClick={() => setView(id)} className={`h-16 px-2 sm:px-3 text-sm font-bold border-b-2 border-transparent transition whitespace-nowrap ${view === id ? 'tab-active' : 'text-slate-500 hover:text-slate-900'}`}>{label}</button>;
+        return <button onClick={() => setView(id)} className={`h-16 px-2 sm:px-3 text-sm font-bold border-b-2 border-transparent transition whitespace-nowrap ${view === id ? 'nav-active' : 'text-slate-500 hover:text-slate-900'}`}>{label}</button>;
       }
 
       function Badge({ children, className }) {
@@ -123,43 +120,42 @@
       }
 
       function Header() {
-        return <header className="nav-glass sticky top-0 z-50"><div className="shell flex h-16 items-center justify-between gap-4"><button onClick={() => setView('feeds')} className="text-left shrink-0"><p className="text-base font-extrabold text-slate-900">资安实习互助平台</p><p className="text-xs text-slate-500">Auto Internship Feeds</p></button><nav className="flex gap-2 overflow-x-auto"><NavButton id="feeds" label="自动信息流" /><NavButton id="guide" label="专业指南" /><NavButton id="community" label="社区" /><NavButton id="about" label="抓取说明" /></nav></div></header>;
-      }
-
-      function Hero() {
-        return <section className="hero rounded-[28px] p-6 md:p-9 text-white overflow-hidden"><div className="grid lg:grid-cols-[1.5fr_.9fr] gap-8 items-center"><div><p className="text-sm font-bold text-blue-100 mb-3">CSU Internship Hub</p><h1 className="text-3xl md:text-5xl font-extrabold leading-tight">自动整理三专业实习信息</h1><p className="mt-4 text-blue-50 leading-relaxed max-w-2xl">网站每天通过 GitHub Actions 自动抓取小红书、抖音、B站和多个实习就业网站的公开结果，按安全工程、采矿工程、城市地下空间工程分类展示。</p><div className="mt-6 flex flex-wrap gap-3"><button onClick={loadFeed} className="rounded-xl bg-white text-slate-900 px-5 py-3 font-bold hover:bg-blue-50 focus-ring">刷新当前数据</button><button onClick={() => setView('about')} className="rounded-xl bg-white/12 border border-white/25 px-5 py-3 font-bold hover:bg-white/20 focus-ring">查看抓取机制</button></div></div><div className="grid grid-cols-2 gap-3"><StatCard value={dashboard.total} label="自动整理条目" /><StatCard value={dashboard.job} label="实习就业网站" /><StatCard value={dashboard.social} label="社媒平台内容" /><StatCard value={posts.length} label="社区经验帖" /></div></div></section>;
+        return <header className="topbar sticky top-0 z-50"><div className="shell flex h-16 items-center justify-between gap-4"><button onClick={() => setView('home')} className="text-left shrink-0"><p className="text-base font-extrabold text-slate-900">资安实习互助站</p><p className="text-xs text-slate-500">建设与维护：大白</p></button><nav className="flex gap-2 overflow-x-auto"><NavButton id="home" label="首页" /><NavButton id="feeds" label="实习信息" /><NavButton id="guide" label="专业方向" /><NavButton id="community" label="同学经验" /><NavButton id="about" label="关于本站" /></nav></div></header>;
       }
 
       function StatCard({ value, label }) {
         return <div className="rounded-2xl bg-white/12 p-4 border border-white/15"><p className="text-3xl font-extrabold">{value}</p><p className="text-sm text-blue-100">{label}</p></div>;
       }
 
+      function HomeView() {
+        return <div className="fade-in space-y-6"><section className="hero rounded-[28px] p-6 md:p-9 text-white overflow-hidden"><div className="grid lg:grid-cols-[1.45fr_.9fr] gap-8 items-center"><div><p className="text-sm font-bold text-blue-100 mb-3">给资安院同学用的实习信息入口</p><h1 className="text-3xl md:text-5xl font-extrabold leading-tight">把安全、采矿、地下空间相关机会整理到一个地方</h1><p className="mt-4 text-blue-50 leading-relaxed max-w-2xl">这里会定期整理公开的实习招聘信息和同学常看的经验内容，按专业方向归类。你可以先快速筛选，再回到原平台确认岗位要求、投递时间和最新状态。</p><div className="mt-6 flex flex-wrap gap-3"><button onClick={() => setView('feeds')} className="rounded-xl bg-white text-slate-900 px-5 py-3 font-bold hover:bg-blue-50 focus-ring">查看实习信息</button><button onClick={() => setView('community')} className="rounded-xl bg-white/12 border border-white/25 px-5 py-3 font-bold hover:bg-white/20 focus-ring">分享同学经验</button></div><p className="mt-5 text-xs text-blue-100">最近整理：{fmtDate(feed.generatedAt)} · 所有内容以原平台为准</p></div><div className="grid grid-cols-2 gap-3"><StatCard value={stats.total} label="已整理信息" /><StatCard value={stats.job} label="招聘/实习网站" /><StatCard value={stats.social} label="经验帖/社媒入口" /><StatCard value={posts.length} label="同学经验帖" /></div></div></section><section className="grid md:grid-cols-3 gap-4">{MAJORS.filter(m => m.id !== 'all').map(m => <button key={m.id} onClick={() => { setMajor(m.id); setView('feeds'); }} className="surface rounded-2xl p-5 text-left hover:border-blue-200"><Badge className={m.tone}>{m.label}</Badge><p className="mt-4 text-3xl font-extrabold">{stats[m.id]}</p><p className="text-sm text-slate-500 mt-1">条相关内容</p><div className="mt-4 flex flex-wrap gap-2">{m.tracks.map(track => <span key={track} className="chip rounded-full px-2.5 py-1 text-xs font-semibold">{track}</span>)}</div></button>)}</section></div>;
+      }
+
+      function Filters() {
+        return <section className="surface rounded-2xl p-5"><div className="grid lg:grid-cols-[1fr_180px_180px_120px] gap-3"><input value={query} onChange={e => setQuery(e.target.value)} placeholder="搜索岗位、平台、公司、面经、专业关键词..." className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none" /><select value={major} onChange={e => setMajor(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none">{MAJORS.map(m => <option key={m.id} value={m.id}>{m.label}</option>)}</select><select value={category} onChange={e => setCategory(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none">{Object.entries(CATEGORY_LABELS).map(([id,label]) => <option key={id} value={id}>{label}</option>)}</select><button onClick={() => { setQuery(''); setMajor('all'); setCategory('all'); }} className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50">重置</button></div><div className="mt-4 flex flex-wrap gap-2">{['EHS','安全评价','智能矿山','矿山安全','盾构','地铁工程','BIM','面经'].map(text => <button key={text} onClick={() => setQuery(text)} className="chip rounded-full px-3 py-1.5 text-xs font-bold">{text}</button>)}</div><p className="mt-4 text-xs text-slate-500">最近整理：{fmtDate(feed.generatedAt)}。平台内容变化很快，投递前请点开原链接核对。</p></section>;
+      }
+
       function FeedsView() {
-        return <div className="fade-in space-y-6"><Hero />
-          <section className="grid md:grid-cols-3 gap-4">{MAJORS.filter(m => m.id !== 'all').map(m => <button key={m.id} onClick={() => { setMajor(m.id); setView('feeds'); }} className="surface rounded-2xl p-5 text-left hover:border-blue-200"><Badge className={m.tone}>{m.label}</Badge><p className="mt-4 text-3xl font-extrabold">{dashboard[m.id]}</p><p className="text-sm text-slate-500 mt-1">已整理条目</p><div className="mt-4 flex flex-wrap gap-2">{m.tracks.map(track => <span key={track} className="chip rounded-full px-2.5 py-1 text-xs font-semibold">{track}</span>)}</div></button>)}</section>
-          <section className="surface rounded-2xl p-5"><div className="grid lg:grid-cols-[1fr_180px_180px_120px] gap-3"><input value={query} onChange={e => setQuery(e.target.value)} placeholder="搜索岗位、平台、公司、面经、专业关键词..." className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none" /><select value={major} onChange={e => setMajor(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none">{MAJORS.map(m => <option key={m.id} value={m.id}>{m.label}</option>)}</select><select value={category} onChange={e => setCategory(e.target.value)} className="focus-ring rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none">{Object.entries(CATEGORY_LABELS).map(([id,label]) => <option key={id} value={id}>{label}</option>)}</select><button onClick={() => { setQuery(''); setMajor('all'); setCategory('all'); }} className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50">重置</button></div><div className="mt-4 flex flex-wrap gap-2">{FEATURED_SEARCHES.map(([majorId, text]) => <button key={text} onClick={() => { setMajor(majorId); setQuery(text.split(' ')[0]); }} className="chip rounded-full px-3 py-1.5 text-xs font-bold">{text}</button>)}</div><p className="mt-4 text-xs text-slate-500">数据更新时间：{feed.generatedAt || '未知'}。若显示 fallback/受限，说明目标平台限制了自动解析，但仍保留原始入口。</p></section>
-          {feedStatus === 'loading' && <div className="surface rounded-2xl p-10 text-center text-slate-500">正在读取自动抓取结果...</div>}
-          {feedStatus === 'error' && <div className="surface rounded-2xl p-10 text-center"><h3 className="font-extrabold text-lg">暂时无法读取 data/feeds.json</h3><p className="text-sm text-slate-500 mt-2">请确认 GitHub Pages 已发布仓库根目录，或稍后等待自动任务生成数据。</p></div>}
-          {feedStatus !== 'loading' && <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">{filteredItems.length === 0 ? <div className="surface rounded-2xl p-10 text-center md:col-span-2 xl:col-span-3 text-slate-500">没有匹配内容，换一个专业或关键词试试。</div> : filteredItems.map(item => <FeedCard key={item.id} item={item} />)}</div>}
-        </div>;
+        return <div className="fade-in space-y-5"><div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3"><div><h1 className="text-3xl font-extrabold">实习信息</h1><p className="text-sm text-slate-500 mt-2">按专业方向和来源筛选，适合先扫一遍机会，再去原平台详细确认。</p></div><button onClick={loadFeed} className="rounded-xl bg-blue-700 text-white px-5 py-3 text-sm font-bold hover:bg-blue-800 focus-ring">刷新信息</button></div><Filters />{feedStatus === 'loading' && <div className="surface rounded-2xl p-10 text-center text-slate-500">正在读取最新整理结果...</div>}{feedStatus === 'error' && <div className="surface rounded-2xl p-10 text-center"><h3 className="font-extrabold text-lg">暂时没有读到信息文件</h3><p className="text-sm text-slate-500 mt-2">可能是网站刚发布或数据还在更新，稍后再刷新即可。</p></div>}{feedStatus !== 'loading' && <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">{filteredItems.length === 0 ? <div className="surface rounded-2xl p-10 text-center md:col-span-2 xl:col-span-3 text-slate-500">没有匹配内容，换一个专业或关键词试试。</div> : filteredItems.map(item => <FeedCard key={item.id} item={item} />)}</div>}</div>;
       }
 
       function FeedCard({ item }) {
         const m = majorById(item.major);
-        return <article className="surface rounded-2xl p-5 flex flex-col min-h-[250px]"><div className="flex flex-wrap gap-2 mb-3"><Badge className={m.tone}>{m.label}</Badge><Badge className={sourceTone(item)}>{CATEGORY_LABELS[item.category] || item.category}</Badge><Badge className="bg-slate-50 text-slate-600 border-slate-100">{item.platform || item.source}</Badge></div><a href={item.url} target="_blank" rel="noopener noreferrer" className="text-lg font-extrabold text-slate-900 hover:text-blue-700 line-clamp-2">{item.title}</a><p className="mt-3 text-sm text-slate-500 leading-relaxed line-clamp-3">{item.summary}</p><div className="mt-auto pt-4 flex items-center justify-between text-xs text-slate-400"><span>{item.status === 'auto' ? '自动抓取' : item.status === 'fallback' ? '抓取受限入口' : item.status === 'search-page' ? '搜索页入口' : '精选保底'}</span><a href={item.url} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-700">查看原文</a></div></article>;
+        const sourceLabel = item.category === 'social' ? '经验/社媒' : '招聘/实习';
+        return <article className="surface rounded-2xl p-5 flex flex-col min-h-[250px]"><div className="flex flex-wrap gap-2 mb-3"><Badge className={m.tone}>{m.label}</Badge><Badge className={item.category === 'social' ? 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-100' : 'bg-cyan-50 text-cyan-700 border-cyan-100'}>{sourceLabel}</Badge><Badge className="bg-slate-50 text-slate-600 border-slate-100">{item.platform || item.source}</Badge></div><a href={item.url} target="_blank" rel="noopener noreferrer" className="text-lg font-extrabold text-slate-900 hover:text-blue-700 line-clamp-2">{item.title}</a><p className="mt-3 text-sm text-slate-500 leading-relaxed line-clamp-3">{item.summary}</p><div className="mt-auto pt-4 flex items-center justify-between text-xs text-slate-400"><span>来自：{item.source || item.platform || '公开平台'}</span><a href={item.url} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-700">查看原链接</a></div></article>;
       }
 
       function GuideView() {
         const cards = [
-          ['safety','安全工程','重点关注 EHS/HSE、安全评价、施工安全、应急管理。准备事故案例复盘、法规检索、隐患排查和现场沟通案例。'],
-          ['mining','采矿工程','重点关注智能矿山、矿山安全、通风爆破、生产调度。准备 CAD/三维建模、矿山现场和安全监测案例。'],
-          ['underground','城市地下空间工程','重点关注盾构、隧道、地铁、基坑监测和 BIM 协同。准备施工工法、监测数据和项目资料案例。']
+          ['safety','安全工程','适合关注 EHS/HSE、安全评价、施工安全、应急管理。准备时可以整理法规检索、隐患排查、事故案例复盘和现场沟通经历。'],
+          ['mining','采矿工程','适合关注智能矿山、矿山安全、通风爆破、生产调度。简历里可以突出工程软件、现场认知、矿山安全监测和生产系统理解。'],
+          ['underground','城市地下空间工程','适合关注盾构、隧道、地铁、基坑监测和 BIM 协同。准备时可以补充施工工法、监测数据、项目资料阅读和建模能力。']
         ];
-        return <div className="fade-in grid md:grid-cols-3 gap-4">{cards.map(([id,title,body]) => <div key={id} className="surface rounded-2xl p-5"><Badge className={majorById(id).tone}>{title}</Badge><p className="mt-4 text-sm text-slate-600 leading-relaxed">{body}</p></div>)}</div>;
+        return <div className="fade-in space-y-5"><div><h1 className="text-3xl font-extrabold">专业方向</h1><p className="text-sm text-slate-500 mt-2">不是替你决定方向，而是帮你更快看懂岗位关键词。</p></div><div className="grid md:grid-cols-3 gap-4">{cards.map(([id,title,body]) => <div key={id} className="surface rounded-2xl p-5"><Badge className={majorById(id).tone}>{title}</Badge><p className="mt-4 text-sm text-slate-600 leading-relaxed">{body}</p></div>)}</div><section className="surface rounded-2xl p-5"><h2 className="text-xl font-extrabold">投递前建议确认</h2><div className="mt-4 grid md:grid-cols-4 gap-3 text-sm text-slate-600"><p className="chip rounded-xl p-3">岗位是否接受本科/硕士实习</p><p className="chip rounded-xl p-3">实习地点、周期和到岗时间</p><p className="chip rounded-xl p-3">专业技能是否真的匹配</p><p className="chip rounded-xl p-3">原平台发布时间和截止时间</p></div></section></div>;
       }
 
       function CommunityView() {
-        return <div className="fade-in space-y-4"><div className="surface rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4"><div><h2 className="text-2xl font-extrabold">社区经验帖</h2><p className="text-sm text-slate-500 mt-1">保留原有 Supabase 社区，用来沉淀同学自己的面经和复盘。</p></div><button onClick={() => setIsPostOpen(true)} className="rounded-xl bg-blue-700 text-white px-5 py-3 font-bold hover:bg-blue-800 focus-ring">发布经验</button></div>{postStatus === 'loading' ? <div className="surface rounded-2xl p-8 text-center text-slate-500">正在读取帖子...</div> : posts.length === 0 ? <div className="surface rounded-2xl p-8 text-center text-slate-500">还没有社区帖子。</div> : posts.map(post => <article key={post.id} className="surface rounded-2xl p-5"><h3 className="text-lg font-extrabold">{post.title}</h3><p className="text-sm text-slate-500 mt-1">{post.author || '匿名同学'} · {post.created_at ? new Date(post.created_at).toLocaleString() : ''}</p><p className="mt-3 text-sm text-slate-700 whitespace-pre-wrap">{safeText(post.content)}</p></article>)}{isPostOpen && <PostModal />}</div>;
+        return <div className="fade-in space-y-4"><div className="surface rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4"><div><h1 className="text-3xl font-extrabold">同学经验</h1><p className="text-sm text-slate-500 mt-1">这里更适合沉淀真实复盘：怎么投、怎么准备、哪里踩坑。</p></div><button onClick={() => setIsPostOpen(true)} className="rounded-xl bg-blue-700 text-white px-5 py-3 font-bold hover:bg-blue-800 focus-ring">发布经验</button></div>{postStatus === 'loading' ? <div className="surface rounded-2xl p-8 text-center text-slate-500">正在读取帖子...</div> : posts.length === 0 ? <div className="surface rounded-2xl p-8 text-center text-slate-500">还没有同学经验帖。</div> : posts.map(post => <article key={post.id} className="surface rounded-2xl p-5"><h3 className="text-lg font-extrabold">{post.title}</h3><p className="text-sm text-slate-500 mt-1">{post.author || '匿名同学'} · {post.created_at ? new Date(post.created_at).toLocaleString() : ''}</p><p className="mt-3 text-sm text-slate-700 whitespace-pre-wrap">{safeText(post.content)}</p></article>)}{isPostOpen && <PostModal />}</div>;
       }
 
       function PostModal() {
@@ -173,14 +169,14 @@
           if (error) return alert('发布失败，请稍后再试。');
           setIsPostOpen(false); loadPosts();
         }
-        return <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm"><div className="surface w-full max-w-2xl rounded-2xl overflow-hidden"><div className="flex items-center justify-between border-b border-slate-100 p-5"><h2 className="text-xl font-extrabold">发布实习经验</h2><button onClick={() => setIsPostOpen(false)} className="text-2xl text-slate-400 hover:text-slate-800">×</button></div><form onSubmit={submit} className="p-5 space-y-4"><input name="title" required placeholder="标题：如 新能源企业EHS实习一面复盘" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none" /><div className="grid md:grid-cols-2 gap-3"><select name="major" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none"><option value="safety">安全工程</option><option value="mining">采矿工程</option><option value="underground">城市地下空间工程</option></select><input name="author" placeholder="昵称 / 年级（可选）" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none" /></div><textarea name="content" required rows="7" placeholder="建议包含：岗位背景、投递方式、准备材料、面试问题、结果反馈、给后来者的建议。" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none resize-none"></textarea><button type="submit" className="w-full rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-ring">发布到社区</button></form></div></div>;
+        return <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm"><div className="surface w-full max-w-2xl rounded-2xl overflow-hidden"><div className="flex items-center justify-between border-b border-slate-100 p-5"><h2 className="text-xl font-extrabold">发布实习经验</h2><button onClick={() => setIsPostOpen(false)} className="text-2xl text-slate-400 hover:text-slate-800">×</button></div><form onSubmit={submit} className="p-5 space-y-4"><input name="title" required placeholder="标题：如 某企业EHS实习一面复盘" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none" /><div className="grid md:grid-cols-2 gap-3"><select name="major" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none"><option value="safety">安全工程</option><option value="mining">采矿工程</option><option value="underground">城市地下空间工程</option></select><input name="author" placeholder="昵称 / 年级（可选）" className="focus-ring rounded-xl border border-slate-200 px-4 py-3 outline-none" /></div><textarea name="content" required rows="7" placeholder="可以写：岗位背景、投递方式、准备材料、面试问题、结果反馈、给后来同学的建议。" className="focus-ring w-full rounded-xl border border-slate-200 px-4 py-3 outline-none resize-none"></textarea><button type="submit" className="w-full rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-ring">发布到同学经验</button></form></div></div>;
       }
 
       function AboutView() {
-        return <div className="fade-in space-y-5"><section className="surface rounded-2xl p-6"><h2 className="text-2xl font-extrabold mb-3">自动抓取机制</h2><div className="space-y-3 text-sm text-slate-600 leading-relaxed"><p>仓库新增了 <strong>GitHub Actions 定时任务</strong>，每天自动运行 `scripts/scrape-feeds.mjs`，抓取公开页面并生成 `data/feeds.json`。</p><p>覆盖来源包括：实习僧、智联招聘、前程无忧、应届生求职网、猎聘、B站、小红书、抖音。所有内容会按三个专业和“实习就业网站 / 社媒平台内容”分类。</p><p>为了公开发布和合规，网站只展示标题、摘要、来源、原始链接和自动分类，不搬运全文、图片、评论或用户隐私信息。</p></div></section><section className="grid md:grid-cols-2 gap-4"><div className="surface rounded-2xl p-5"><h3 className="font-extrabold mb-2">如果平台限制抓取</h3><p className="text-sm text-slate-600 leading-relaxed">小红书、抖音等平台可能限制自动解析。脚本会保留对应搜索入口，并标记为“抓取受限入口”，用户仍可进入原平台查看。</p></div><div className="surface rounded-2xl p-5"><h3 className="font-extrabold mb-2">如何立即更新</h3><p className="text-sm text-slate-600 leading-relaxed">在 GitHub 仓库 Actions 页面手动运行 “Update internship feeds”，即可立刻生成最新 `data/feeds.json`。</p></div></section></div>;
+        return <div className="fade-in space-y-5"><section className="surface rounded-2xl p-6"><h1 className="text-3xl font-extrabold mb-3">关于本站</h1><div className="space-y-3 text-sm text-slate-600 leading-relaxed"><p>资安实习互助站面向年级同学使用，整理安全工程、采矿工程、城市地下空间工程相关的公开实习信息和经验入口。</p><p>网站建设与维护：<strong>大白</strong>。页面只展示适合同学查看的内容，维护数据、登录记录和用户资料放在单独的维护台中。</p><p>本站只保留标题、摘要、来源和原链接，不搬运全文、图片、评论或私人信息。实习信息变化很快，请以原平台页面为准。</p></div></section><section className="grid md:grid-cols-2 gap-4"><div className="surface rounded-2xl p-5"><h2 className="font-extrabold mb-2">适合怎么用</h2><p className="text-sm text-slate-600 leading-relaxed">先按专业和关键词筛选，收藏值得看的原链接，再结合“同学经验”准备简历和面试。这里不是官方就业系统，而是一个更轻量的同学互助入口。</p></div><div className="surface rounded-2xl p-5"><h2 className="font-extrabold mb-2">维护入口</h2><p className="text-sm text-slate-600 leading-relaxed">如果你是维护者，可以进入维护台查看信息整理状态、社区帖子、用户资料和登录记录。</p><a href="admin.html" className="mt-4 inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-slate-700">进入大白维护台</a></div></section></div>;
       }
 
-      return <div className="min-h-screen"><Header /><main className="shell py-8">{view === 'feeds' && <FeedsView />}{view === 'guide' && <GuideView />}{view === 'community' && <CommunityView />}{view === 'about' && <AboutView />}</main><footer className="shell pb-8 text-center text-xs text-slate-400">CSU Internship Hub · 自动抓取公开信息 · 请以原平台信息为准</footer></div>;
+      return <div className="min-h-screen"><Header /><main className="shell py-8">{view === 'home' && <HomeView />}{view === 'feeds' && <FeedsView />}{view === 'guide' && <GuideView />}{view === 'community' && <CommunityView />}{view === 'about' && <AboutView />}</main><footer className="shell pb-8 text-center text-xs text-slate-400">资安实习互助站 · 建设与维护：大白 · 请以原平台信息为准</footer></div>;
     }
 
     ReactDOM.createRoot(document.getElementById('root')).render(<App />);
