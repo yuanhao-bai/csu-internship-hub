@@ -1,35 +1,23 @@
 {
-  "generatedAt": "2026-08-01T23:14:22.935Z",
+  "generatedAt": "2026-08-02T23:15:15.291Z",
   "note": "Automatically generated. Items keep titles, summaries, source names and original links only.",
   "counts": {
-    "total": 240,
-    "safety": 78,
-    "mining": 86,
-    "underground": 76,
-    "job": 231,
+    "total": 249,
+    "safety": 80,
+    "mining": 91,
+    "underground": 78,
+    "job": 240,
     "social": 9
   },
   "errors": [
     {
-      "source": "前程无忧",
-      "major": "safety",
-      "query": "安全工程 实习",
-      "message": "fetch failed"
-    },
-    {
       "source": "应届生求职网",
       "major": "safety",
       "query": "安全工程 实习",
       "message": "HTTP 404"
     },
     {
-      "source": "猎聘",
-      "major": "safety",
-      "query": "安全工程 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
+      "source": "应届生求职网",
       "major": "safety",
       "query": "EHS 实习",
       "message": "fetch failed"
@@ -37,35 +25,11 @@
     {
       "source": "应届生求职网",
       "major": "safety",
-      "query": "EHS 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "safety",
-      "query": "EHS 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "safety",
       "query": "HSE 实习",
       "message": "fetch failed"
     },
     {
       "source": "应届生求职网",
-      "major": "safety",
-      "query": "HSE 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "safety",
-      "query": "HSE 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
       "major": "safety",
       "query": "安全评价 实习",
       "message": "fetch failed"
@@ -73,35 +37,11 @@
     {
       "source": "应届生求职网",
       "major": "safety",
-      "query": "安全评价 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "safety",
-      "query": "安全评价 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "safety",
       "query": "安全工程 面经",
       "message": "fetch failed"
     },
     {
       "source": "应届生求职网",
-      "major": "safety",
-      "query": "安全工程 面经",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "safety",
-      "query": "安全工程 面经",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
       "major": "mining",
       "query": "采矿工程 实习",
       "message": "fetch failed"
@@ -109,55 +49,13 @@
     {
       "source": "应届生求职网",
       "major": "mining",
-      "query": "采矿工程 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "mining",
-      "query": "采矿工程 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "mining",
       "query": "矿山 实习",
       "message": "fetch failed"
     },
     {
       "source": "应届生求职网",
       "major": "mining",
-      "query": "矿山 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "mining",
-      "query": "矿山 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "mining",
       "query": "智能矿山 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "应届生求职网",
-      "major": "mining",
-      "query": "智能矿山 实习",
-      "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "mining",
-      "query": "智能矿山 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "mining",
-      "query": "采矿工程 面经",
       "message": "fetch failed"
     },
     {
@@ -167,34 +65,10 @@
       "message": "HTTP 404"
     },
     {
-      "source": "猎聘",
-      "major": "mining",
-      "query": "采矿工程 面经",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "mining",
-      "query": "矿业 校招",
-      "message": "fetch failed"
-    },
-    {
       "source": "应届生求职网",
       "major": "mining",
       "query": "矿业 校招",
       "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "mining",
-      "query": "矿业 校招",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "underground",
-      "query": "城市地下空间工程 实习",
-      "message": "fetch failed"
     },
     {
       "source": "应届生求职网",
@@ -203,34 +77,10 @@
       "message": "HTTP 404"
     },
     {
-      "source": "猎聘",
-      "major": "underground",
-      "query": "城市地下空间工程 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "underground",
-      "query": "盾构 实习",
-      "message": "fetch failed"
-    },
-    {
       "source": "应届生求职网",
       "major": "underground",
       "query": "盾构 实习",
       "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "underground",
-      "query": "盾构 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "underground",
-      "query": "隧道 实习",
-      "message": "fetch failed"
     },
     {
       "source": "应届生求职网",
@@ -245,40 +95,16 @@
       "message": "fetch failed"
     },
     {
-      "source": "前程无忧",
-      "major": "underground",
-      "query": "地铁工程 实习",
-      "message": "fetch failed"
-    },
-    {
       "source": "应届生求职网",
       "major": "underground",
       "query": "地铁工程 实习",
       "message": "HTTP 404"
     },
     {
-      "source": "猎聘",
-      "major": "underground",
-      "query": "地铁工程 实习",
-      "message": "fetch failed"
-    },
-    {
-      "source": "前程无忧",
-      "major": "underground",
-      "query": "基坑监测 实习",
-      "message": "fetch failed"
-    },
-    {
       "source": "应届生求职网",
       "major": "underground",
       "query": "基坑监测 实习",
       "message": "HTTP 404"
-    },
-    {
-      "source": "猎聘",
-      "major": "underground",
-      "query": "基坑监测 实习",
-      "message": "fetch failed"
     }
   ],
   "items": [
@@ -349,56 +175,56 @@
       "status": "seed"
     },
     {
-      "id": "7fe03dbb2f508606",
+      "id": "0bbcca96734414f1",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "安全实习&#xec42",
+      "title": "安全实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_pyt1citkrdo4?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "4735c37eb8bcdc4f",
+      "id": "07c214cfaefd2ff1",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "安全与&#xf03d府事务部-安全研发实习&#xec42",
+      "title": "安全与&#xf5e5府事务部-安全研发实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_yc9rlb0drbre?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "a5d001b6d338e6b9",
+      "id": "d47ca0b80376f9ee",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe88d&#xf840实习&#xec42",
+      "title": "&#xe350&#xeeda实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_ftbqgbmmcvxk?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "1de80600c155cd98",
+      "id": "af7a072338bf7e9e",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "信息安全实习&#xec42",
+      "title": "信息安全实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_ap9mnim3ddxp?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "c6ea66e2550ff969",
+      "id": "885650ec98be7c99",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "公共安全部实习&#xec42",
+      "title": "公共安全部实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_losyyrz7ica7?pcm=pc_SearchList",
       "status": "auto"
@@ -470,26 +296,26 @@
       "status": "auto"
     },
     {
-      "id": "643d0d995961c7e1",
+      "id": "b53877854ccd6c73",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "定期安全评估助理工程师（机械、核工程、能源动力、力学、材料相近专业）",
-      "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC163032910J40950262408.htm",
+      "title": "网络安全工程设计（太原）",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1288383070J40941708415.htm",
       "status": "auto"
     },
     {
-      "id": "2f91ad733c26fe38",
+      "id": "820a5598adbbe4b8",
       "major": "safety",
       "category": "job",
       "platform": "前程无忧",
       "source": "前程无忧",
-      "title": "前程无忧：安全工程 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
+      "title": "前程无忧：安全工程相关结果页",
+      "summary": "已抓取到 前程无忧 的公开搜索页，但页面结构限制了列表解析，请打开原页面查看最新结果。",
       "url": "https://we.51job.com/pc/search?keyword=%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "status": "search-page"
     },
     {
       "id": "b1013dd6f162b1c7",
@@ -503,15 +329,136 @@
       "status": "fallback"
     },
     {
-      "id": "26b79ae77124ad50",
+      "id": "c1a7baebe301de2e",
       "major": "safety",
       "category": "job",
       "platform": "猎聘",
       "source": "猎聘",
-      "title": "猎聘：安全工程 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "title": "南航销售经理招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpnhxsjl10v2s/",
+      "status": "auto"
+    },
+    {
+      "id": "9bc1028ade5266cb",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "钣金氩弧焊工招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpzjzhhg10m5e/",
+      "status": "auto"
+    },
+    {
+      "id": "4a289405b1b3ae23",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "饮料产品经理招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpylcpjl6y5e/",
+      "status": "auto"
+    },
+    {
+      "id": "a2dc1ecf74ced755",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "俄语配件业务员招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpeypjywy4q6o/",
+      "status": "auto"
+    },
+    {
+      "id": "d2e85de2bd9b3e18",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "海外跟单专员招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zphwgdzy4s5d/",
+      "status": "auto"
+    },
+    {
+      "id": "f7e82ac6c91b6559",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "漫画产品经理招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpmhcpjl10u10g/",
+      "status": "auto"
+    },
+    {
+      "id": "a11a397b41e999d2",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "中医药产品经理招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpzyycpjl7b10p/",
+      "status": "auto"
+    },
+    {
+      "id": "782baff354100301",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "通用研发工程师招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zptyyfgcs7d7u/",
+      "status": "auto"
+    },
+    {
+      "id": "2279c915f59c5935",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "股权投资总经理招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpgqtzzjl3s1i/",
+      "status": "auto"
+    },
+    {
+      "id": "aa08bb05b656e297",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "碳核查核算工程师招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpthchsgcs10f2l/",
+      "status": "auto"
+    },
+    {
+      "id": "224d55f3e87c272f",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "用户画像LEADER招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpyhhxleaders9w6/",
+      "status": "auto"
+    },
+    {
+      "id": "e52f74c7a6c8330e",
+      "major": "safety",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "音频硬件专家招聘",
+      "summary": "来自 猎聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpypyjzjc7n1/",
+      "status": "auto"
     },
     {
       "id": "07790669604ff6dd",
@@ -536,67 +483,67 @@
       "status": "search-page"
     },
     {
-      "id": "182d406904dad372",
+      "id": "86f9c0073853316f",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ae&#xf1da&#xeec5实习&#xec42",
+      "title": "&#xe3fd&#xee68&#xf266实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_uhi9l3ey9frk?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "046afddfea75a7b8",
+      "id": "e7eca297d91d140c",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ae&#xf1da&#xeec5助理实习&#xec42",
+      "title": "&#xe3fd&#xee68&#xf266助理实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_mmdyybqjmics?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "e2be0085a28c24b4",
+      "id": "4185d8d3248b745d",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ae&#xf1da&#xeec5管理实习&#xec42",
+      "title": "&#xe3fd&#xee68&#xf266管理实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_6cguppyvt8x6?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "5a8b00a7296f31ce",
+      "id": "c780838b5c4434ae",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ae&#xf1da&#xeec5 体系&#xe88d&#xf840实习&#xec42",
+      "title": "&#xe3fd&#xee68&#xf266 体系&#xe350&#xeeda实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_kl9wiws9ieqb?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "ae535558b3367ef6",
+      "id": "61772f449a44bba5",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ae&#xf1da&#xeec5（环境健康安全）实习&#xec42",
+      "title": "&#xe3fd&#xee68&#xf266（环境健康安全）实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_7eq1kiwagu1r?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "9d88a959decb4093",
+      "id": "91108303fab0cae8",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "部门助理实习&#xec42（&#xe2ae&#xf1da&#xeec5部门）—&#xf854&#xea16&#xe176",
+      "title": "部门助理实习&#xf123（&#xe3fd&#xee68&#xf266部门）—&#xe9ed&#xe85a&#xf564",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_flirn7n2dxrn?pcm=pc_SearchList",
       "status": "auto"
@@ -624,103 +571,92 @@
       "status": "auto"
     },
     {
-      "id": "3133e7036f46fbba",
+      "id": "acea8257434fa99b",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "实习生（农业 植物等相关专业优先）",
+      "title": "自动化 储备工程师 上床下桌 可实习",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC135176550J40952751708.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1461926250J40793134006.htm",
       "status": "auto"
     },
     {
-      "id": "74f37e0b30fd2a12",
+      "id": "5225834f022b88aa",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "NGS注册实习生",
+      "title": "零基础+手机维修实习生",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1235399050J40863081907.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC406464230J40477094116.htm",
       "status": "auto"
     },
     {
-      "id": "d9ea40c8bdda926b",
+      "id": "6eb4193fb4ec74e7",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "设备工程师（接受实习）",
+      "title": "朴朴超市直招推广专员+月入过万（可实习）",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC398624920J40508166216.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC408522280J40835743910.htm",
       "status": "auto"
     },
     {
-      "id": "3e4fd6e71447928b",
+      "id": "6319ef80e2a5c4e0",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "会计助理（可实习可转正/有人带/近地铁）",
+      "title": "急聘品牌专员实习生+双休",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1260045590J40826935113.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC432293710J40864592805.htm",
       "status": "auto"
     },
     {
-      "id": "57108cd342a68857",
+      "id": "a9feb4d6f3549fce",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "新锐实习生（门店运营）",
+      "title": "质检26届27届大专实习生 线上面试 包吃住",
+      "summary": "来自 智联招聘 的安全工程相关面试/经验内容，请打开原链接查看完整信息。",
+      "url": "http://www.zhaopin.com/jobdetail/CC547900620J40907149212.htm",
+      "status": "auto"
+    },
+    {
+      "id": "72ec1894b33360fd",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "接应届生! 开实习证明+包住宿",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC192921310J40860408809.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1514002900J41006939002.htm",
       "status": "auto"
     },
     {
-      "id": "b2862052d80f6d9c",
+      "id": "4285c7bb2db1811c",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "面就过/坐班7000/包住（可实习）",
+      "title": "实习/正式服务审查员",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1478769450J40826939801.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1375914180J40853596210.htm",
       "status": "auto"
     },
     {
-      "id": "f7d4a36c820e8636",
+      "id": "4ea9fb9a5edda8f6",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "朴朴超市直招实习人事专员 （纯招聘）日薪150",
+      "title": "朴朴推广，提供实习证明，月休6天，有住宿",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC408522280J40865371910.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC408522280J40835694810.htm",
       "status": "auto"
-    },
-    {
-      "id": "ff470d734e53c602",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "ehs经理（工作地点：山西省大同市）",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC198391720J40865458007.htm",
-      "status": "auto"
-    },
-    {
-      "id": "62ea87b0f62ea340",
-      "major": "safety",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：EHS 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=EHS%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
     },
     {
       "id": "278bec16ade26f11",
@@ -734,34 +670,23 @@
       "status": "fallback"
     },
     {
-      "id": "545c03995459ee0e",
-      "major": "safety",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：EHS 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=EHS%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "a48b7d3c49678a8f",
+      "id": "83f9e9cf13ea09e2",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xf1da&#xeec5&#xe2ae实习&#xec42",
+      "title": "&#xee68&#xf266&#xe3fd实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_t7pcaxjfyrbb?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "c76907b3644a5f74",
+      "id": "dfee0cdfd3ea4bb8",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "健康安全环境实习&#xec42/&#xf1da&#xeec5&#xe2ae &#xf009&#xf29f&#xe04b&#xef4e&#xf04c&#xf29f",
+      "title": "健康安全环境实习&#xf123/&#xee68&#xf266&#xe3fd &#xeabb&#xec70&#xe193&#xf6b3&#xf32b&#xec70",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_odod3kwrapes?pcm=pc_SearchList",
       "status": "auto"
@@ -775,6 +700,50 @@
       "title": "HSE安全管理实习生",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "http://www.zhaopin.com/jobdetail/CC220966120J40753805306.htm",
+      "status": "auto"
+    },
+    {
+      "id": "fb0d1367e7d3cdf2",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "HSE物业安全主管",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC139619340J40888207403.htm",
+      "status": "auto"
+    },
+    {
+      "id": "8c7f291a049b4186",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "安全经理 HSE Manager",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC291949680J40874040613.htm",
+      "status": "auto"
+    },
+    {
+      "id": "02ba587368c20c14",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "HSE经理(J23842)",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC138718430J40877635514.htm",
+      "status": "auto"
+    },
+    {
+      "id": "8ad8ff8014bcd53b",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "HSE Engineer（世界五百强）",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC138117190J40884007205.htm",
       "status": "auto"
     },
     {
@@ -800,39 +769,6 @@
       "status": "auto"
     },
     {
-      "id": "fb0d1367e7d3cdf2",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "HSE物业安全主管",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC139619340J40888207403.htm",
-      "status": "auto"
-    },
-    {
-      "id": "8ad8ff8014bcd53b",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "HSE Engineer（世界五百强）",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC138117190J40884007205.htm",
-      "status": "auto"
-    },
-    {
-      "id": "02ba587368c20c14",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "HSE经理(J23842)",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC138718430J40877635514.htm",
-      "status": "auto"
-    },
-    {
       "id": "4416db2d8960385c",
       "major": "safety",
       "category": "job",
@@ -852,17 +788,6 @@
       "title": "安全（HSE）咨询师",
       "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
       "url": "http://www.zhaopin.com/jobdetail/CC187421620J40782583813.htm",
-      "status": "auto"
-    },
-    {
-      "id": "aa4f86b1f1903961",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "监理员（HSE安全方向）",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC000617840J40723597909.htm",
       "status": "auto"
     },
     {
@@ -899,17 +824,6 @@
       "status": "auto"
     },
     {
-      "id": "66ac87405146192f",
-      "major": "safety",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：HSE 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=HSE%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
       "id": "adc739e76fe53451",
       "major": "safety",
       "category": "job",
@@ -921,78 +835,67 @@
       "status": "fallback"
     },
     {
-      "id": "b0b0f23b877cb804",
-      "major": "safety",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：HSE 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=HSE%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "af33aba7050bfa04",
+      "id": "2c16efa926c9a33b",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "安全评价咨询实习&#xec42",
+      "title": "安全评价咨询实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_twobzduvmb5w?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "ce67797619d144bc",
+      "id": "23ef43417917c92f",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "基金评价实习&#xec42",
+      "title": "基金评价实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_5jicjzdbylxq?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "fe82bce3d56ceca9",
+      "id": "b71259be10c6a49f",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "职业卫&#xec42评价实习&#xec42",
+      "title": "职业卫&#xf123评价实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_e7mfrq7sdpgn?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "46f2d91ec971cd9b",
+      "id": "4b5899f4e7d31996",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "量化实习&#xec42（基金产品评价方向）",
+      "title": "量化实习&#xf123（基金产品评价方向）",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_7blwmi6jyfjy?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "e09191f1c7eb76d1",
+      "id": "5c5167509a88ad93",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "实习&#xec42-食品安全",
+      "title": "实习&#xf123-食品安全",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_1jcnltsmsnid?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "2e0853c35db5ea9a",
+      "id": "8bd391c45d45d6c9",
       "major": "safety",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xec1b络安全实习&#xec42",
+      "title": "&#xe706络安全实习&#xf123",
       "summary": "来自 实习僧 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_wpzkx18v1lmf?pcm=pc_SearchList",
       "status": "auto"
@@ -1009,17 +912,6 @@
       "status": "auto"
     },
     {
-      "id": "6e212e3bd5d5ecb5",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "网络管理员实习生",
-      "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1522113490J40859937401.htm",
-      "status": "auto"
-    },
-    {
       "id": "cad974d851662832",
       "major": "safety",
       "category": "job",
@@ -1028,6 +920,17 @@
       "title": "安全评价技术人员",
       "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
       "url": "http://www.zhaopin.com/jobdetail/CCL1408917160J40796146405.htm",
+      "status": "auto"
+    },
+    {
+      "id": "6e212e3bd5d5ecb5",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "网络管理员实习生",
+      "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1522113490J40859937401.htm",
       "status": "auto"
     },
     {
@@ -1042,25 +945,14 @@
       "status": "auto"
     },
     {
-      "id": "495a2ade7e36def4",
+      "id": "9569f70a40947815",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "消防中控（接受实习生",
-      "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1509989120J40811128305.htm",
-      "status": "auto"
-    },
-    {
-      "id": "e1cab192cb5634d5",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "安全评价师（地点：青海）",
+      "title": "安全评价师（化工方向）",
       "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC511863720J40552797507.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC661429420J40884087805.htm",
       "status": "auto"
     },
     {
@@ -1075,26 +967,37 @@
       "status": "auto"
     },
     {
-      "id": "9569f70a40947815",
+      "id": "bea3e2215aa26430",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "安全评价师（化工方向）",
+      "title": "山东鲁轻安全评价技术有限公司",
       "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC661429420J40884087805.htm",
+      "url": "https://www.zhaopin.com/companydetail/CZ460082730.htm",
       "status": "auto"
     },
     {
-      "id": "fe3c528409ad6c04",
+      "id": "738d5d7898e6c7c8",
       "major": "safety",
       "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：安全评价 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E5%AE%89%E5%85%A8%E8%AF%84%E4%BB%B7%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "安全评价师/注册安全工程师（化工、工贸）",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC200640120J40823509316.htm",
+      "status": "auto"
+    },
+    {
+      "id": "388949ee2a28edcf",
+      "major": "safety",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "高级安全评价工程师（电气，自动化，冶金）",
+      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC634581420J40884123405.htm",
+      "status": "auto"
     },
     {
       "id": "fc83498637b6f2d2",
@@ -1108,59 +1011,15 @@
       "status": "fallback"
     },
     {
-      "id": "3a159fbace6c2d60",
-      "major": "safety",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：安全评价 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E5%AE%89%E5%85%A8%E8%AF%84%E4%BB%B7%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "0894e15bede0b30f",
+      "id": "643d0d995961c7e1",
       "major": "safety",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "招聘工程类专职安全员C1和C3证 岗位",
+      "title": "定期安全评估助理工程师（机械、核工程、能源动力、力学、材料相近专业）",
       "summary": "来自 智联招聘 的安全工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC566006520J40792902506.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC163032910J40950262408.htm",
       "status": "auto"
-    },
-    {
-      "id": "af1dc8901def508f",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "安全评价师(冶金工程）",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC180297520J40589115709.htm",
-      "status": "auto"
-    },
-    {
-      "id": "98a15cc2df46bdc2",
-      "major": "safety",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "辽宁金帝消防安全工程有限公司",
-      "summary": "来自 智联招聘 的安全工程相关公开信息，已按关键词自动归类。",
-      "url": "https://www.zhaopin.com/companydetail/CZ605158720.htm",
-      "status": "auto"
-    },
-    {
-      "id": "38fb496464a39465",
-      "major": "safety",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：安全工程 面经",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%20%E9%9D%A2%E7%BB%8F",
-      "status": "fallback"
     },
     {
       "id": "0ed1c70072818f35",
@@ -1171,17 +1030,6 @@
       "title": "应届生求职网：安全工程 面经",
       "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
       "url": "https://www.yingjiesheng.com/so.php?word=%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%20%E9%9D%A2%E7%BB%8F",
-      "status": "fallback"
-    },
-    {
-      "id": "a1a74d4e30ccebd2",
-      "major": "safety",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：安全工程 面经",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%20%E9%9D%A2%E7%BB%8F",
       "status": "fallback"
     },
     {
@@ -1273,17 +1121,6 @@
       "status": "auto"
     },
     {
-      "id": "dea3c2fecaa58b26",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "职业卫生采样员（采矿工程）",
-      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC345571010J40570572403.htm",
-      "status": "auto"
-    },
-    {
       "id": "ab35504f352a3adb",
       "major": "mining",
       "category": "job",
@@ -1292,6 +1129,17 @@
       "title": "2025年-2026年校招——采矿工程岗",
       "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "http://www.zhaopin.com/jobdetail/CC847037970J40629879713.htm",
+      "status": "auto"
+    },
+    {
+      "id": "dea3c2fecaa58b26",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "职业卫生采样员（采矿工程）",
+      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CC345571010J40570572403.htm",
       "status": "auto"
     },
     {
@@ -1306,15 +1154,15 @@
       "status": "auto"
     },
     {
-      "id": "86c186cedfe4603f",
+      "id": "0d28bc9852756d5b",
       "major": "mining",
       "category": "job",
       "platform": "前程无忧",
       "source": "前程无忧",
-      "title": "前程无忧：采矿工程 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
+      "title": "前程无忧：采矿工程相关结果页",
+      "summary": "已抓取到 前程无忧 的公开搜索页，但页面结构限制了列表解析，请打开原页面查看最新结果。",
       "url": "https://we.51job.com/pc/search?keyword=%E9%87%87%E7%9F%BF%E5%B7%A5%E7%A8%8B%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "status": "search-page"
     },
     {
       "id": "feee776e89a2c2a2",
@@ -1328,15 +1176,136 @@
       "status": "fallback"
     },
     {
-      "id": "6f44c79dd41c22c0",
+      "id": "3e763741dc088557",
       "major": "mining",
       "category": "job",
       "platform": "猎聘",
       "source": "猎聘",
-      "title": "猎聘：采矿工程 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E9%87%87%E7%9F%BF%E5%B7%A5%E7%A8%8B%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "title": "南航销售经理招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpnhxsjl10v2s/",
+      "status": "auto"
+    },
+    {
+      "id": "cc79409b86063819",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "钣金氩弧焊工招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpzjzhhg10m5e/",
+      "status": "auto"
+    },
+    {
+      "id": "7b2dbda15184d4ff",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "饮料产品经理招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpylcpjl6y5e/",
+      "status": "auto"
+    },
+    {
+      "id": "dc0168b904eebfa3",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "俄语配件业务员招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpeypjywy4q6o/",
+      "status": "auto"
+    },
+    {
+      "id": "2d58fceed79cb152",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "海外跟单专员招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zphwgdzy4s5d/",
+      "status": "auto"
+    },
+    {
+      "id": "15adebfcd44e94db",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "漫画产品经理招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpmhcpjl10u10g/",
+      "status": "auto"
+    },
+    {
+      "id": "66624be68a3e5099",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "中医药产品经理招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpzyycpjl7b10p/",
+      "status": "auto"
+    },
+    {
+      "id": "ad1c4539b988a19d",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "通用研发工程师招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zptyyfgcs7d7u/",
+      "status": "auto"
+    },
+    {
+      "id": "f34bd1ccbcc0c5c5",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "股权投资总经理招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpgqtzzjl3s1i/",
+      "status": "auto"
+    },
+    {
+      "id": "fdaa8f537c90f46c",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "碳核查核算工程师招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpthchsgcs10f2l/",
+      "status": "auto"
+    },
+    {
+      "id": "c7c48920ff366cac",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "用户画像LEADER招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpyhhxleaders9w6/",
+      "status": "auto"
+    },
+    {
+      "id": "008b7ea84a57b7d3",
+      "major": "mining",
+      "category": "job",
+      "platform": "猎聘",
+      "source": "猎聘",
+      "title": "音频硬件专家招聘",
+      "summary": "来自 猎聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.liepin.com/zpypyjzjc7n1/",
+      "status": "auto"
     },
     {
       "id": "c3c56f4dc43c3430",
@@ -1372,6 +1341,28 @@
       "status": "auto"
     },
     {
+      "id": "3a04a270c22808f4",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "矿山设备售后技术服务",
+      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1481670230J40789344106.htm",
+      "status": "auto"
+    },
+    {
+      "id": "4b35998ecf4370e0",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "沈阳海纳森矿山机械有限公司",
+      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
+      "url": "https://www.zhaopin.com/companydetail/CZL1481670230.htm",
+      "status": "auto"
+    },
+    {
       "id": "1dae5f54c19eae7b",
       "major": "mining",
       "category": "job",
@@ -1402,28 +1393,6 @@
       "title": "烟台市鑫蓬矿山工程有限公司",
       "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
       "url": "https://www.zhaopin.com/companydetail/CC293269711.htm",
-      "status": "auto"
-    },
-    {
-      "id": "3a04a270c22808f4",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "矿山设备售后技术服务",
-      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1481670230J40789344106.htm",
-      "status": "auto"
-    },
-    {
-      "id": "4b35998ecf4370e0",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "沈阳海纳森矿山机械有限公司",
-      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
-      "url": "https://www.zhaopin.com/companydetail/CZL1481670230.htm",
       "status": "auto"
     },
     {
@@ -1482,17 +1451,6 @@
       "status": "auto"
     },
     {
-      "id": "f75932b2c306a301",
-      "major": "mining",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：矿山 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E7%9F%BF%E5%B1%B1%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
       "id": "d86883bbc7927bef",
       "major": "mining",
       "category": "job",
@@ -1504,146 +1462,168 @@
       "status": "fallback"
     },
     {
-      "id": "2542be2a0cfb8f50",
-      "major": "mining",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：矿山 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E7%9F%BF%E5%B1%B1%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "8d5198109d6972fc",
+      "id": "c70be62eaff919f8",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能研究组实习&#xec42",
+      "title": "智能研究组实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_zxtuoan2wrse?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "c93ce39f30c953d8",
+      "id": "d12000714f00d9eb",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能客服实习&#xec42",
+      "title": "智能客服实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_xdx4sqsvl7tw?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "923ef9dda31d7ffc",
+      "id": "5caa2166afeafadb",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "具身智能实习&#xec42",
+      "title": "具身智能实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_binngf4kj4oa?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "240d6fa30843aae5",
+      "id": "b826f7f41670dbcc",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能编码实习&#xec42",
+      "title": "智能编码实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_mfv78h4vf1f0?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "f1f0abe3e31bee19",
+      "id": "0d0b796bf25775b2",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能制造实习&#xec42",
+      "title": "智能制造实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_85ntfidsr2vw?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "cb1001dc801122b2",
+      "id": "bc24d0fb033bf4d4",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能体开发实习&#xec42",
+      "title": "智能体开发实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_f83ujm7ptphq?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "838cd811ab84aa78",
+      "id": "82963d9a15063a9c",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能硬&#xe8ec开发实习&#xec42",
+      "title": "智能硬&#xeec1开发实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_v3nlgxd7ufo2?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "81b19ff01daf2d8e",
+      "id": "344512d8b57f4963",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "数据智能开发实习&#xec42",
+      "title": "数据智能开发实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_kocvvimepiiq?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "d490bbf7efeba407",
+      "id": "9478509700381172",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能客服运营实习&#xec42",
+      "title": "智能客服运营实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_sdnycqd4ys0b?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "43889971da955a6b",
+      "id": "d9cd57baac99cee4",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "具身智能开发实习&#xec42",
+      "title": "具身智能开发实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_ndf9k6didblq?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "d75b9b09fd76e123",
+      "id": "6148b834b9a4182b",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "智能体测试实习&#xec42",
+      "title": "智能体测试实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_4aryam6be4nt?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "27c3dca9acacc27e",
+      "id": "a714e6f4082bad22",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "具身智能算法实习&#xec42",
+      "title": "具身智能算法实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_1ktmoxpe4ilq?pcm=pc_SearchList",
+      "status": "auto"
+    },
+    {
+      "id": "eac210ad72350684",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "硬件工程师（实习）",
+      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "http://www.zhaopin.com/jobdetail/CC300880130J40246975016.htm",
+      "status": "auto"
+    },
+    {
+      "id": "344fc8de3428fc4e",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "ROS软件工程师(实习岗）",
+      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "http://www.zhaopin.com/jobdetail/CC300880130J40718183416.htm",
+      "status": "auto"
+    },
+    {
+      "id": "2d8f08f7f501a280",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "综合实习生（带薪培训+可转正）",
+      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1512107560J40823722811.htm",
       "status": "auto"
     },
     {
@@ -1702,28 +1682,6 @@
       "status": "auto"
     },
     {
-      "id": "30edc2178bb70810",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "27届实习生(工业机器人售后)-华南",
-      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC406659880J40911500203.htm",
-      "status": "auto"
-    },
-    {
-      "id": "c3b1d8e0603cd9c0",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "实习生（编程类，需实习1年以上）",
-      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC663682320J40938225302.htm",
-      "status": "auto"
-    },
-    {
       "id": "0d20abe6e9215d7e",
       "major": "mining",
       "category": "job",
@@ -1746,26 +1704,26 @@
       "status": "auto"
     },
     {
-      "id": "eac210ad72350684",
+      "id": "c3b1d8e0603cd9c0",
       "major": "mining",
       "category": "job",
       "platform": "智联招聘",
       "source": "智联招聘",
-      "title": "硬件工程师（实习）",
+      "title": "实习生（编程类，需实习1年以上）",
       "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "http://www.zhaopin.com/jobdetail/CC300880130J40246975016.htm",
+      "url": "http://www.zhaopin.com/jobdetail/CC663682320J40938225302.htm",
       "status": "auto"
     },
     {
-      "id": "65e12128f2394de6",
+      "id": "30edc2178bb70810",
       "major": "mining",
       "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：智能矿山 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E6%99%BA%E8%83%BD%E7%9F%BF%E5%B1%B1%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "27届实习生(工业机器人售后)-华南",
+      "summary": "来自 智联招聘 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "http://www.zhaopin.com/jobdetail/CC406659880J40911500203.htm",
+      "status": "auto"
     },
     {
       "id": "6f778d4238ca77ee",
@@ -1776,28 +1734,6 @@
       "title": "应届生求职网：智能矿山 实习",
       "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
       "url": "https://www.yingjiesheng.com/so.php?word=%E6%99%BA%E8%83%BD%E7%9F%BF%E5%B1%B1%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "79fce9ccba0e2484",
-      "major": "mining",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：智能矿山 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E6%99%BA%E8%83%BD%E7%9F%BF%E5%B1%B1%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
-    },
-    {
-      "id": "3c1385ef69cc20e0",
-      "major": "mining",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：采矿工程 面经",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E9%87%87%E7%9F%BF%E5%B7%A5%E7%A8%8B%20%E9%9D%A2%E7%BB%8F",
       "status": "fallback"
     },
     {
@@ -1812,168 +1748,135 @@
       "status": "fallback"
     },
     {
-      "id": "6c5a80aab661b955",
-      "major": "mining",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：采矿工程 面经",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E9%87%87%E7%9F%BF%E5%B7%A5%E7%A8%8B%20%E9%9D%A2%E7%BB%8F",
-      "status": "fallback"
-    },
-    {
-      "id": "9c608541b8033423",
+      "id": "5cf30842133b3e4f",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xf1da&#xe109校&#xf013实习&#xec42",
+      "title": "&#xee68&#xe738校&#xe35c实习&#xf123",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_hqaeyoa5laf6?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "bfbd55fadf70f9e0",
+      "id": "9c282560c829bd44",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe833&#xf834&#xeec5开发实习&#xec42（校&#xf013）",
+      "title": "&#xe7f6&#xe87f&#xf266开发实习&#xf123（校&#xe35c）",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_zkv4fdwsb68d?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "219d480638998494",
+      "id": "9ed02102b1a80c3a",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xf345力资源实习&#xec42（校&#xf013方向）",
+      "title": "&#xe0ff力资源实习&#xf123（校&#xe35c方向）",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_r659jkxnhodo?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "48390be4facd903f",
+      "id": "1fb088feec53ccd3",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "校&#xf013实习-乐道顾问-上海",
+      "title": "校&#xe35c实习-乐道顾问-上海",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_fihauyv1kqom?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "7a97fd51a54d8adf",
+      "id": "174fcc97e477d9e5",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "【校&#xf013】医药代表实习&#xec42-通辽",
+      "title": "【校&#xe35c】医药代表实习&#xf123-通辽",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_bzc4a40klynd?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "9d5ebdd7d0759f63",
+      "id": "671a276cea3273c0",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xf345力资源部校&#xf013团队实习&#xec42-上海",
+      "title": "&#xe0ff力资源部校&#xe35c团队实习&#xf123-上海",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_noq2n1ia9gtj?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "0f593f8341881f85",
+      "id": "7a737afdc45e9737",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "产品&#xe61e&#xf199-校&#xf013实习转正(&#xeb90&#xe182&#xf28b&#xf124&#xf244&#xf64b)",
+      "title": "产品&#xef57&#xf8e1-校&#xe35c实习转正(&#xec7a&#xe626&#xe972&#xe9c6&#xe63f&#xe8e3)",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_xkwog6bwpojn?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "03d3523cc70d1f62",
+      "id": "2aeedbe43533ae81",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "品牌&#xe61e&#xf199-校&#xf013实习转正(&#xeb90&#xe683&#xe622&#xe622&#xf244&#xf64b)",
+      "title": "品牌&#xef57&#xf8e1-校&#xe35c实习转正(&#xec7a&#xe941&#xf34b&#xf34b&#xe63f&#xe8e3)",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_bxhynygbbgvy?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "98ac73371740f538",
+      "id": "f7d25d163e769889",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "数字营销-校&#xf013实习转正(&#xeb90&#xe622&#xf4bc&#xf4bc&#xf255&#xe683)",
+      "title": "数字营销-校&#xe35c实习转正(&#xec7a&#xf34b&#xe10a&#xe10a&#xea6b&#xe941)",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_6sb6vbxhf7mz?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "a1da286661766ad6",
+      "id": "c2981a76a493fa3a",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "【滴露】主播实习&#xec42（校&#xf013可转正）",
+      "title": "【滴露】主播实习&#xf123（校&#xe35c可转正）",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_xzfznqnqodt1?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "74688e88c6c7f891",
+      "id": "ea1063cb7386204d",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "【校&#xf013实习】&#xec4f&#xe8ec产品经理(&#xeb90&#xe622&#xf4bc&#xf28b&#xf28b&#xf124&#xf244)",
+      "title": "【校&#xe35c实习】&#xf68b&#xeec1产品经理(&#xec7a&#xf34b&#xe10a&#xe972&#xe972&#xe9c6&#xe63f)",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_v5z8jwacprjh?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "b6ce1b27361781c0",
+      "id": "3807422c862cff60",
       "major": "mining",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "数据营销实习&#xec42（校&#xf013可转正）",
+      "title": "数据营销实习&#xf123（校&#xe35c可转正）",
       "summary": "来自 实习僧 的采矿工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_u4eqtwky1wpl?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "15f393fda5615aad",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "矿业金融总监（成都）",
-      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CCL1390606780J40866801114.htm",
-      "status": "auto"
-    },
-    {
-      "id": "c6a0d93c7e7835d1",
-      "major": "mining",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "新疆天地源矿业集团有限公司",
-      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
-      "url": "https://www.zhaopin.com/companydetail/CZL1390606780.htm",
       "status": "auto"
     },
     {
@@ -1996,6 +1899,28 @@
       "title": "锡林郭勒盟隆兴矿业有限责任公司",
       "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
       "url": "https://www.zhaopin.com/companydetail/CZ692746080.htm",
+      "status": "auto"
+    },
+    {
+      "id": "15f393fda5615aad",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "矿业金融总监（成都）",
+      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
+      "url": "http://www.zhaopin.com/jobdetail/CCL1390606780J40866801114.htm",
+      "status": "auto"
+    },
+    {
+      "id": "c6a0d93c7e7835d1",
+      "major": "mining",
+      "category": "job",
+      "platform": "智联招聘",
+      "source": "智联招聘",
+      "title": "新疆天地源矿业集团有限公司",
+      "summary": "来自 智联招聘 的采矿工程相关公开信息，已按关键词自动归类。",
+      "url": "https://www.zhaopin.com/companydetail/CZL1390606780.htm",
       "status": "auto"
     },
     {
@@ -2076,17 +2001,6 @@
       "status": "auto"
     },
     {
-      "id": "58f6144ff39ef1b2",
-      "major": "mining",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：矿业 校招",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E7%9F%BF%E4%B8%9A%20%E6%A0%A1%E6%8B%9B",
-      "status": "fallback"
-    },
-    {
       "id": "2cce0e7fef05525e",
       "major": "mining",
       "category": "job",
@@ -2098,169 +2012,81 @@
       "status": "fallback"
     },
     {
-      "id": "49ee1c31f9243611",
-      "major": "mining",
-      "category": "job",
-      "platform": "猎聘",
-      "source": "猎聘",
-      "title": "猎聘：矿业 校招",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://www.liepin.com/zhaopin/?key=%E7%9F%BF%E4%B8%9A%20%E6%A0%A1%E6%8B%9B",
-      "status": "fallback"
-    },
-    {
-      "id": "66736ee5762bf682",
+      "id": "d15ef5537cae34eb",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ed务部实习&#xec42",
+      "title": "&#xe92b务部实习&#xf123",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_jrcvmwcebme4?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "52089a51bd32d557",
+      "id": "ee086d10da754021",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "&#xe2ed务实习&#xec42",
+      "title": "&#xe92b务实习&#xf123",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_xdlkzdbbykwd?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "86b84ff652ec9f6a",
+      "id": "c8ef63cf5e640714",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "新媒体助理实习&#xec42",
+      "title": "实习施&#xe350员",
+      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
+      "url": "https://www.shixiseng.com/intern/inn_5pq2dmraovn3?pcm=pc_SearchList",
+      "status": "auto"
+    },
+    {
+      "id": "fc8a8fee5f7053b4",
+      "major": "underground",
+      "category": "job",
+      "platform": "实习僧",
+      "source": "实习僧",
+      "title": "新媒体助理实习&#xf123",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_d95cb6mlyoxt?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "30f19c4e05e5fba1",
+      "id": "4e4602610b0eb8b2",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "法务实习&#xec42",
+      "title": "法务实习&#xf123",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_583uolclwmc1?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "ff4807f7cc5025fc",
+      "id": "3179217b55152ba7",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "产品开发实习&#xec42",
+      "title": "产品开发实习&#xf123",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_pz1ynzukfkem?pcm=pc_SearchList",
       "status": "auto"
     },
     {
-      "id": "ffb8b26db1a417af",
+      "id": "a270c2a4c3569ab0",
       "major": "underground",
       "category": "job",
       "platform": "实习僧",
       "source": "实习僧",
-      "title": "室内&#xe61e&#xf199&#xe9ee助理",
+      "title": "室内&#xef57&#xf8e1&#xf3e2助理",
       "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
       "url": "https://www.shixiseng.com/intern/inn_av0bas2pmlfj?pcm=pc_SearchList",
       "status": "auto"
-    },
-    {
-      "id": "02a38a5bb40540ad",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "文案活动策划实习&#xec42",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_nwklj6clrisx?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "705000291c5943f6",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "瑜伽博主自媒体助理",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_7vwpchnuyhtv?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "893c151a4550cfad",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "文案编辑实习&#xec42",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_nzaekiqdymka?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "909a114e95731f51",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "城&#xeb51分析实习&#xec42",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_hdqux2ha0hlk?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "c416c066d83b3450",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "城&#xeb51拓展实习&#xec42",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_wbkxtwxyuw0c?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "eee77353ef98cc78",
-      "major": "underground",
-      "category": "job",
-      "platform": "实习僧",
-      "source": "实习僧",
-      "title": "&#xeb90&#xe176&#xe176城&#xeb51&#xf013商实习&#xec42",
-      "summary": "来自 实习僧 的城市地下空间工程相关实习/就业信息，请以原网站发布时间和要求为准。",
-      "url": "https://www.shixiseng.com/intern/inn_guopz26fnbwq?pcm=pc_SearchList",
-      "status": "auto"
-    },
-    {
-      "id": "62ed59e52d068133",
-      "major": "underground",
-      "category": "job",
-      "platform": "智联招聘",
-      "source": "智联招聘",
-      "title": "井建设计工程师（城市地下空间工程）",
-      "summary": "来自 智联招聘 的城市地下空间工程相关公开信息，已按关键词自动归类。",
-      "url": "http://www.zhaopin.com/jobdetail/CC303778010J40610402502.htm",
-      "status": "auto"
-    },
-    {
-      "id": "83c498e53c9bc3b8",
-      "major": "underground",
-      "category": "job",
-      "platform": "前程无忧",
-      "source": "前程无忧",
-      "title": "前程无忧：城市地下空间工程 实习",
-      "summary": "该来源本次自动抓取受限，已保留公开搜索入口，方便用户进入原平台查看。",
-      "url": "https://we.51job.com/pc/search?keyword=%E5%9F%8E%E5%B8%82%E5%9C%B0%E4%B8%8B%E7%A9%BA%E9%97%B4%E5%B7%A5%E7%A8%8B%20%E5%AE%9E%E4%B9%A0",
-      "status": "fallback"
     }
   ]
 }
